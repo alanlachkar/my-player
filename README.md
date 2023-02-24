@@ -23,8 +23,6 @@ My Player is designed for minimum configuration (using react-query and react-rou
 - Axios for request HTTP handling data
 - dotenv to configure .env
 
-
-
 ## Pre installation (toolings)
 
 VS Code extensions used to develop faster.
@@ -44,8 +42,6 @@ This plugin is used to help you to develop and add rules to stylesheet your codi
 - Git hooks
 
 Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
-
-
 
 # Installation
 
@@ -75,7 +71,7 @@ Don't forget to run `yarn install` to install all dependencies.
 | `src/assets/**`                 | The static assets exported to index.tsx if the latters doesn't exceed 5kb                          |
 | `src/api/**`                    | Services API for managing all api requests, all data requests and response data                    |
 | `src/pages/**`                  | Core application                                                                                   |
-| `src/pages/App.tsx`             | Main application routes, components that need to be mounted at all times                           |
+| `src/pages/MainPage.tsx`        | Main application routes, components that need to be mounted at all times                           |
 | `src/components/**`             | Directory use for independant components reusable                                                  |
 | `src/types/**`                  | Interface use to define Model structures                                                           |
 | `src/utils/**`                  | All the utility, helpers, constants and enums that can be used across the application              |

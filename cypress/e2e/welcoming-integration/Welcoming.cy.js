@@ -11,7 +11,7 @@ describe('Welcoming flow', () => {
   });
 
   it("Check tab's title", () => {
-    cy.title().should('include', 'Query React App template');
+    cy.title().should('include', 'My Player');
   });
 
   it('Intercept the jsonplaceholder request', () => {
