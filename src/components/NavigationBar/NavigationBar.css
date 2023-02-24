@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64;
+  margin: 0px 8px;
+}
+
+.iconAndNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
