@@ -1,0 +1,16 @@
+# gitignore react
+yarn-error.log
+node_modules/
+*~
+build/
+dist/
+.module-cache
+fixtures/dom/public/react-dom.js
+fixtures/dom/public/react.js
+.vscode
+stats/
+
+# Coverage elements
+.nyc_output/
+.coverage/
+cypress/screenshots
