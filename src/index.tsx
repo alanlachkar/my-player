@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 // Component imports
 import MainPage from './pages/MainPage/MainPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import MoviesPage from './pages/MoviesPage/MoviesPage';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'movies',
-        element: <p>Films</p>
+        element: <MoviesPage />
       }
     ]
   }

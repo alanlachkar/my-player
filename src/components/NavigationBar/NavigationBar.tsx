@@ -13,11 +13,10 @@ const NavigationBar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.iconAndNav}>
-        <img height={64} alt="website logo" src={myPlayer} />
+        <Link to="/">
+          <img height={64} alt="website logo" src={myPlayer} />
+        </Link>
         <ButtonGroup variant="text" aria-label="navigation top bar">
-          <Button>
-            <Link to="/">Home</Link>
-          </Button>
           <Button>
             <Link to="/my-list">Ma liste</Link>
           </Button>

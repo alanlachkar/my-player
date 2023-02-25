@@ -1,0 +1,7 @@
+.container:hover {
+  cursor: pointer;
+}
+
+.picture {
+  object-fit: scale-down !important;
+}
