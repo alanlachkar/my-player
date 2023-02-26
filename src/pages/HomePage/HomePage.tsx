@@ -1,13 +1,14 @@
 // React imports
 import { useState, useEffect, useRef } from 'react';
 // Component imports
-import Button from '@mui/material/Button/Button';
+import MyCard from '../../components/MyCard/MyCard';
 import VideoControls from '../../components/VideoControls/VideoControls';
 // Utils imports
 import RxPlayer from 'rx-player';
 // Css imports
 import styles from './HomePage.css';
 import AdditionalSections from '../../components/AdditionalSections/AdditionalSections';
+import BBBPoster from '../../assets/affiche_Big_Buck_Bunny.png';
 
 /**
  * Home Page component displaying when the user click on the 'My Player' icon
@@ -16,7 +17,7 @@ import AdditionalSections from '../../components/AdditionalSections/AdditionalSe
 const HomePage = () => {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [rxPlayer, setRxPlayer] = useState<RxPlayer | null>(null);
-
+  const videoWrapper = useRef<HTMLDivElement | null>(null);
   const videoElement = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -31,13 +32,20 @@ const HomePage = () => {
 
   return (
     <div className={styles.container}>
-      <Button onClick={() => onLoadVideo(rxPlayer)}>Load the big buck bunny</Button>
-      <div className={styles.bkg}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', margin: '8px' }}>
+        <MyCard
+          onClickCard={(value: string) => onLoadVideo(rxPlayer, value)}
+          videoName="BigBuckBunny"
+          posterPicture={BBBPoster}
+        />
+      </div>
+      <div className={styles.bkg} ref={videoWrapper}>
         <video className={styles.vid} ref={videoElement}></video>
         {rxPlayer && isLoaded && (
           <div className={styles.videoControlsContrainer}>
             <VideoControls
               player={rxPlayer}
+              videoWrapper={videoWrapper.current}
               onPlay={() => onPlay(rxPlayer)}
               stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
               duration={rxPlayer.getVideoDuration()}
@@ -85,10 +93,10 @@ function onPlay(rxPlayer: RxPlayer | null) {
  * Function used to load the video on the rxPlayer
  * @param rxPlayer the rx player
  */
-function onLoadVideo(rxPlayer: RxPlayer | null) {
+function onLoadVideo(rxPlayer: RxPlayer | null, videoName: string) {
   if (rxPlayer) {
     rxPlayer.loadVideo({
-      url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      url: `https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/${videoName}.mp4`,
       transport: 'directfile',
       autoPlay: false
     });

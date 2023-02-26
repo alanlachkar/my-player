@@ -9,36 +9,45 @@ import CardActions from '@mui/material/CardActions/CardActions';
 import CardContent from '@mui/material/CardContent/CardContent';
 // Icon imports
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import BBBPoster from '../../assets/affiche_Big_Buck_Bunny.png';
 import NotFavoriteIcon from '@mui/icons-material/FavoriteBorder';
 // Css import
 import styles from './MyCard.css';
 
-const MyCard = () => {
+interface MyCardProperties {
+  onClickCard: (value: string) => void;
+  videoName: string;
+  posterPicture: string;
+}
+
+const MyCard = (props: MyCardProperties) => {
+  const { videoName } = props;
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   return (
     <Card
       sx={{ maxWidth: 250 }}
-      onClick={() => console.log('click on card ! ')}
+      onClick={() => props.onClickCard(videoName)}
       className={styles.container}
     >
       <CardMedia
         className={styles.picture}
         component="img"
         height="194"
-        image={BBBPoster}
-        alt="poster of Big Buck Bunny"
+        image={props.posterPicture}
+        alt={`poster of ${videoName}`}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook together
-          with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+          Cela raconte l'histoire d'un lapin se faisant embêter par 3 rongeurs et qui
+          contre-attaque par la suite. Il ne vaut mieux pas le chercher.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton
           aria-label="add to favorites"
-          onClick={() => setIsFavorite((oldIsFavorite: boolean) => !oldIsFavorite)}
+          onClick={(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+            event.stopPropagation();
+            setIsFavorite((oldIsFavorite: boolean) => !oldIsFavorite);
+          }}
         >
           {isFavorite ? <FavoriteIcon /> : <NotFavoriteIcon />}
         </IconButton>

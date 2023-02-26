@@ -6,22 +6,24 @@ import IconButton from '@mui/material/IconButton/IconButton';
 // Utils imports
 import RxPlayer from 'rx-player';
 import Stop from '@mui/icons-material/Stop';
-import FullScreen from '@mui/icons-material/FullScreen';
 //Css imports
 import styles from './VideoControls.css';
+import FullScreenButton from '../FullScreenButton/FullScreenButton';
 
 /**
  * Interface of VideoControls component
- * onPlay     - Play/Pause the rxPlayer
- * duration   - Duration of the selected video
- * stopVideo  - Stop the video
- * player     - The rxPlayer
+ * onPlay       - Play/Pause the rxPlayer
+ * duration     - Duration of the selected video
+ * stopVideo    - Stop the video
+ * player       - The rxPlayer
+ * videoWrapper - div containing the video tag
  */
 interface VideoControlsProperties {
   onPlay: () => void;
   duration: number;
   stopVideo: () => void;
   player: RxPlayer;
+  videoWrapper: HTMLDivElement | null;
 }
 
 /**
@@ -40,13 +42,7 @@ const VideoControls = (props: VideoControlsProperties): JSX.Element => {
       </IconButton>
       <TimeBar duration={props.duration} player={player} />
       <VolumeButton player={player} />
-      <IconButton
-        onClick={() => {
-          console.log('click on Stop button');
-        }}
-      >
-        <FullScreen className={styles.icon} />
-      </IconButton>
+      <FullScreenButton videoWrapper={props.videoWrapper} />
     </div>
   );
 };
