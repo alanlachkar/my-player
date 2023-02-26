@@ -1,9 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .bkg {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  max-height: 400px;
-  width: 60%;
+  width: 50%;
   overflow: hidden;
   margin: 0 auto;
   position: relative;
@@ -21,4 +24,30 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+section {
+  margin: 0px 24px;
+}
+details {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+  margin: 4px 16px;
+}
+
+details section {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 4px;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
 }

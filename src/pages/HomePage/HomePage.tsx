@@ -7,6 +7,7 @@ import VideoControls from '../../components/VideoControls/VideoControls';
 import RxPlayer from 'rx-player';
 // Css imports
 import styles from './HomePage.css';
+import AdditionalSections from '../../components/AdditionalSections/AdditionalSections';
 
 /**
  * Home Page component displaying when the user click on the 'My Player' icon
@@ -29,23 +30,22 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <Button onClick={() => onLoadVideo(rxPlayer)}>Load the big buck bunny</Button>
-        <div className={styles.bkg}>
-          <video className={styles.vid} ref={videoElement}></video>
-          {rxPlayer && isLoaded && (
-            <div className={styles.videoControlsContrainer}>
-              <VideoControls
-                player={rxPlayer}
-                onPlay={() => onPlay(rxPlayer)}
-                stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
-                duration={rxPlayer.getVideoDuration()}
-              />
-            </div>
-          )}
-        </div>
+    <div className={styles.container}>
+      <Button onClick={() => onLoadVideo(rxPlayer)}>Load the big buck bunny</Button>
+      <div className={styles.bkg}>
+        <video className={styles.vid} ref={videoElement}></video>
+        {rxPlayer && isLoaded && (
+          <div className={styles.videoControlsContrainer}>
+            <VideoControls
+              player={rxPlayer}
+              onPlay={() => onPlay(rxPlayer)}
+              stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
+              duration={rxPlayer.getVideoDuration()}
+            />
+          </div>
+        )}
       </div>
+      <AdditionalSections />
     </div>
   );
 };
