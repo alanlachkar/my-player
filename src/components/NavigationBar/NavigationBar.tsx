@@ -14,7 +14,7 @@ const NavigationBar = () => {
     <div className={styles.container}>
       <div className={styles.iconAndNav}>
         <Link to="/">
-          <img height={64} alt="website logo" src={myPlayer} />
+          <img className={styles.icon} height={64} alt="website logo" src={myPlayer} />
         </Link>
         <ButtonGroup variant="text" aria-label="navigation top bar">
           <Button>
