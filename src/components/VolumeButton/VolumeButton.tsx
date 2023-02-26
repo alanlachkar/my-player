@@ -1,7 +1,7 @@
 // React imports
 import { useState } from 'react';
 // Component imports
-import { IconButton } from '@mui/material';
+import { IconButton, Slider } from '@mui/material';
 // Utils imports
 import RxPlayer from 'rx-player';
 import { VolumeUp, VolumeOff } from '@mui/icons-material';
@@ -24,15 +24,25 @@ interface VolumeButtonProperties {
 const VolumeButton = (props: VolumeButtonProperties): JSX.Element => {
   const { player } = props;
   const [isVolumeOn, setIsVolumeOn] = useState(true);
+  const [volumeValue, setVolumeValue] = useState<number>(100);
+
+  const handleChangeVolume = (_: Event, newValue: number | number[]) => {
+    setVolumeValue(newValue as number);
+    player.setVolume((newValue as number) / 100);
+    setIsVolumeOn((newValue as number) !== 0);
+  };
+
+  const handleClickVolume = (): void => {
+    player.isMute() ? player.unMute() : player.mute();
+    setIsVolumeOn((old) => !old);
+  };
 
   return (
     <>
       <IconButton
-        onClick={() => {
-          player.isMute() ? player.unMute() : player.mute();
-          setIsVolumeOn((old) => !old);
-          console.log('click on Volume button');
-        }}
+        onClick={(_: React.MouseEvent<HTMLButtonElement, MouseEvent>): void =>
+          handleClickVolume()
+        }
       >
         {isVolumeOn ? (
           <VolumeUp className={styles.icon} />
@@ -40,6 +50,15 @@ const VolumeButton = (props: VolumeButtonProperties): JSX.Element => {
           <VolumeOff className={styles.icon} />
         )}
       </IconButton>
+      <div className={styles.sliderContainer}>
+        <Slider
+          size="small"
+          aria-label="Volume"
+          value={volumeValue}
+          onChange={handleChangeVolume}
+          valueLabelDisplay="auto"
+        />
+      </div>
     </>
   );
 };
