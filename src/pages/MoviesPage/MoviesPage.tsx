@@ -1,4 +1,4 @@
-import React from 'react';
+// Component imports
 import MyCard from '../../components/MyCard/MyCard';
 
 const MoviesPage = () => {

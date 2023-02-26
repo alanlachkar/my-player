@@ -1,13 +1,28 @@
-import { Slider, Typography } from '@mui/material';
+// React imports
 import { useEffect, useState } from 'react';
+// Component imports
+import { Slider, Typography } from '@mui/material';
+// Utils imports
 import RxPlayer from 'rx-player';
 import { IPositionUpdate } from 'rx-player/dist/_esm5.processed/public_types';
+// Css imports
+import styles from './TimeBar.css';
 
+/**
+ * Interface of TimeBar component
+ * duration - Duration of the selected video
+ * player   - The rxPlayer
+ */
 interface TimeBarProperties {
   duration: number;
   player: RxPlayer;
 }
 
+/**
+ * Display the progress bar with the time that has passed and the time left
+ * @param props Properties of the component
+ * @returns The TimeBar component
+ */
 const TimeBar = (props: TimeBarProperties): JSX.Element => {
   const { duration, player } = props;
   const [position, setPosition] = useState(0);
@@ -25,43 +40,28 @@ const TimeBar = (props: TimeBarProperties): JSX.Element => {
 
   return (
     <>
-      <Typography
-        style={{
-          fontSize: '0.75rem',
-          opacity: 0.8,
-          fontWeight: 500,
-          letterSpacing: 0.2,
-          color: '#ddd',
-          padding: '0px 8px'
-        }}
-      >
-        {formatDuration(position)}
-      </Typography>
+      <Typography className={styles.countingText}>{formatDuration(position)}</Typography>
       <Slider
         aria-label="time-indicator"
         size="small"
         value={position}
         min={0}
         step={1}
-        max={duration ? duration : 0}
+        max={duration}
         onChange={(_: Event, value: number | number[]) => setPosition(value as number)}
       />
-      <Typography
-        style={{
-          fontSize: '0.75rem',
-          opacity: 0.8,
-          fontWeight: 500,
-          letterSpacing: 0.2,
-          color: '#ddd',
-          padding: '0px 8px'
-        }}
-      >
+      <Typography className={styles.countingText}>
         -{formatDuration(duration - position)}
       </Typography>
     </>
   );
 };
 
+/**
+ * Function used to format the duration in minutes:seconds
+ * @param value The value to format
+ * @returns The formatted time left
+ */
 function formatDuration(value: number) {
   const minute = Math.floor(value / 60);
   const secondLeft = Math.round(value - minute * 60);

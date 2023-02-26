@@ -1,12 +1,26 @@
+// React imports
+import { useState } from 'react';
+// Component imports
+import { IconButton } from '@mui/material';
+// Utils imports
 import Pause from '@mui/icons-material/Pause';
 import PlayArrow from '@mui/icons-material/PlayArrow';
-import { IconButton } from '@mui/material';
-import { useState } from 'react';
+// Css imports
+import styles from './PlayButton.css';
 
+/**
+ * Interface of PlayButton component
+ * onPlay - Play/Pause the rxPlayer
+ */
 interface PlayButtonProperties {
   onPlay: () => void;
 }
 
+/**
+ * Display Play/Pause button
+ * @param props Interface of the component
+ * @returns Play/Pause component
+ */
 const PlayButton = (props: PlayButtonProperties): JSX.Element => {
   const [isPlayed, setIsPlayed] = useState(false);
 
@@ -18,9 +32,9 @@ const PlayButton = (props: PlayButtonProperties): JSX.Element => {
       }}
     >
       {isPlayed ? (
-        <Pause style={{ color: '#ddd' }} />
+        <Pause className={styles.icon} />
       ) : (
-        <PlayArrow style={{ color: '#ddd' }} />
+        <PlayArrow className={styles.icon} />
       )}
     </IconButton>
   );

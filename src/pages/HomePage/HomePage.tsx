@@ -1,67 +1,42 @@
-import Button from '@mui/material/Button/Button';
-import RxPlayer from 'rx-player';
+// React imports
 import { useState, useEffect, useRef } from 'react';
+// Component imports
+import Button from '@mui/material/Button/Button';
 import VideoControls from '../../components/VideoControls/VideoControls';
+// Utils imports
+import RxPlayer from 'rx-player';
 
+/**
+ * Home Page component displaying when the user click on the 'My Player' icon
+ * @returns The content of the home page
+ */
 const HomePage = () => {
-  const [player, setPlayer] = useState<RxPlayer | null>(null);
-  const videoElement = useRef<HTMLVideoElement | null>(null);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [rxPlayer, setRxPlayer] = useState<RxPlayer | null>(null);
+
+  const videoElement = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const player = new RxPlayer({ videoElement: videoElement.current });
     playerWatcher(player, setIsLoaded);
-    setPlayer(player);
+    setRxPlayer(player);
 
     return () => {
       playerStopWatcher(player, setIsLoaded);
     };
   }, []);
 
-  const onLoadVideo = () => {
-    if (player) {
-      player.loadVideo({
-        url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-        transport: 'directfile',
-        autoPlay: false
-      });
-    } else {
-      console.log(
-        '🚀 ~ file: HomePage.tsx:27 ~ onLoadVideo ~ player is not defined to load video'
-      );
-    }
-  };
-
-  const onPlay = (): void => {
-    if (player) {
-      if (player.getPlayerState() === 'PLAYING') {
-        player.pause();
-      } else {
-        player.play();
-      }
-    } else {
-      console.log(
-        '🚀 ~ file: HomePage.tsx:44 ~ onPlay ~ player is not defined to play/pause the video'
-      );
-    }
-  };
-
-  const stopVideo = (): void => {
-    player?.stop();
-    setIsLoaded((old) => !old);
-  };
-
   return (
     <div>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <Button onClick={onLoadVideo}>Load the big buck bunny</Button>
+        <Button onClick={() => onLoadVideo(rxPlayer)}>Load the big buck bunny</Button>
         <video style={{ backgroundColor: 'black' }} ref={videoElement}></video>
-        {player && isLoaded && (
+        {rxPlayer && isLoaded && (
           <VideoControls
-            player={player}
-            onPlay={onPlay}
-            stopVideo={stopVideo}
-            duration={player.getVideoDuration()}
+            player={rxPlayer}
+            onPlay={() => onPlay(rxPlayer)}
+            stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
+            duration={rxPlayer.getVideoDuration()}
           />
         )}
       </div>
@@ -69,50 +44,96 @@ const HomePage = () => {
   );
 };
 
-function playerStopWatcher(
-  player: RxPlayer | null,
+/**
+ * Function used to stop the video and hiding the videoControls component
+ * @param rxPlayer the rx player
+ * @param setIsLoaded Function used to update isLoaded state
+ */
+function stopVideo(
+  rxPlayer: RxPlayer | null,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
 ) {
-  player?.removeEventListener('playerStateChange', (state) =>
+  rxPlayer?.stop();
+  setIsLoaded((old) => !old);
+}
+
+/**
+ * Function used to play/pause the video
+ * @param rxPlayer the rx player
+ */
+function onPlay(rxPlayer: RxPlayer | null) {
+  if (rxPlayer) {
+    if (rxPlayer.getPlayerState() === 'PLAYING') {
+      rxPlayer.pause();
+    } else {
+      rxPlayer.play();
+    }
+  } else {
+    console.log(
+      '🚀 ~ file: HomePage.tsx:44 ~ onPlay ~ player is not defined to play/pause the video'
+    );
+  }
+}
+
+/**
+ * Function used to load the video on the rxPlayer
+ * @param rxPlayer the rx player
+ */
+function onLoadVideo(rxPlayer: RxPlayer | null) {
+  if (rxPlayer) {
+    rxPlayer.loadVideo({
+      url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+      transport: 'directfile',
+      autoPlay: false
+    });
+  } else {
+    console.log(
+      '🚀 ~ file: HomePage.tsx:27 ~ onLoadVideo ~ player is not defined to load video'
+    );
+  }
+}
+
+/**
+ * Function gathering all the events' listener and stop them during the unmounting of the component
+ * @param rxPlayer the rx player
+ * @param setIsLoaded Function used to update isLoaded state
+ */
+function playerStopWatcher(
+  rxPlayer: RxPlayer,
+  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
+) {
+  rxPlayer.removeEventListener('playerStateChange', (state) =>
     onPlayerStateChange(state, setIsLoaded)
   );
-  player?.removeEventListener('error', (err) =>
+  rxPlayer.removeEventListener('error', (err) =>
     console.log('the error content stopped due to unmounting of the component', err)
   );
-  player?.removeEventListener('warning', (warning) =>
-    console.log('the warning content ', warning)
-  );
-  player?.removeEventListener('seeking', (seeking) =>
-    console.log('the seeking content ', seeking)
-  );
-  player?.removeEventListener('seeked', (seeked) =>
-    console.log('the seeked content ', seeked)
-  );
 }
 
+/**
+ * Function gathering all the events' listener and start them during the mounting of the component
+ * @param rxPlayer the rx player
+ * @param setIsLoaded Function used to update isLoaded state
+ */
 function playerWatcher(
-  player: RxPlayer,
+  rxPlayer: RxPlayer,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
 ) {
-  console.log('🚀 ~ file: HomePage.tsx:14 ~ useEffect ~ player:', player);
+  console.log('🚀 ~ file: HomePage.tsx:14 ~ useEffect ~ player:', rxPlayer);
 
-  player.addEventListener('playerStateChange', (state) =>
+  rxPlayer.addEventListener('playerStateChange', (state) =>
     onPlayerStateChange(state, setIsLoaded)
   );
-  player.addEventListener('error', (err) => {
+  rxPlayer.addEventListener('error', (err) => {
     console.log('the content stopped with the following error', err);
   });
-  player.addEventListener('warning', (warning) =>
-    console.log('the warning content ', warning)
-  );
-  player.addEventListener('seeking', (seeking) =>
-    console.log('the seeking content ', seeking)
-  );
-  player.addEventListener('seeked', (seeked) =>
-    console.log('the seeked content ', seeked)
-  );
 }
 
+/**
+ * Function used to display the current video's state
+ * @param state the video's state
+ * @param setIsLoaded Function used to update isLoaded state
+ */
 function onPlayerStateChange(
   state: string,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
@@ -120,32 +141,32 @@ function onPlayerStateChange(
   console.log('🚀 ~ file: HomePage.tsx:113 ~ onPlayerStateChange ~ state:', state);
   switch (state) {
     case 'STOPPED':
-      console.log('No content is/will be playing');
+      console.log('STOPPED: No content is/will be playing');
       break;
     case 'LOADING':
-      console.log('A new content is currently loading');
+      console.log('LOADING: A new content is currently loading');
       break;
     case 'LOADED':
-      console.log('The new content is loaded and ready to be played');
+      console.log('LOADED: The new content is loaded and ready to be played');
       setIsLoaded((old) => !old);
       break;
     case 'PLAYING':
-      console.log('The content is currently playing');
+      console.log('PLAYING: The content is currently playing');
       break;
     case 'PAUSED':
-      console.log('The content is currently paused');
+      console.log('PAUSED: The content is currently paused');
       break;
     case 'BUFFERING':
-      console.log('The content is buffering new data');
+      console.log('BUFFERING: The content is buffering new data');
       break;
     case 'SEEKING':
-      console.log('The content is still seeking, waiting for new data');
+      console.log('SEEKING: The content is still seeking, waiting for new data');
       break;
     case 'ENDED':
-      console.log('The content has reached the end.');
+      console.log('ENDED: The content has reached the end.');
       break;
     case 'RELOADING':
-      console.log('The content is currently reloading');
+      console.log('RELOADING: The content is currently reloading');
       break;
     default:
       console.log('This is impossible (issue material!).');
