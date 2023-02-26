@@ -5,6 +5,8 @@ import Button from '@mui/material/Button/Button';
 import VideoControls from '../../components/VideoControls/VideoControls';
 // Utils imports
 import RxPlayer from 'rx-player';
+// Css imports
+import styles from './HomePage.css';
 
 /**
  * Home Page component displaying when the user click on the 'My Player' icon
@@ -30,15 +32,19 @@ const HomePage = () => {
     <div>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <Button onClick={() => onLoadVideo(rxPlayer)}>Load the big buck bunny</Button>
-        <video style={{ backgroundColor: 'black' }} ref={videoElement}></video>
-        {rxPlayer && isLoaded && (
-          <VideoControls
-            player={rxPlayer}
-            onPlay={() => onPlay(rxPlayer)}
-            stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
-            duration={rxPlayer.getVideoDuration()}
-          />
-        )}
+        <div className={styles.bkg}>
+          <video className={styles.vid} ref={videoElement}></video>
+          {rxPlayer && isLoaded && (
+            <div className={styles.videoControlsContrainer}>
+              <VideoControls
+                player={rxPlayer}
+                onPlay={() => onPlay(rxPlayer)}
+                stopVideo={() => stopVideo(rxPlayer, setIsLoaded)}
+                duration={rxPlayer.getVideoDuration()}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
