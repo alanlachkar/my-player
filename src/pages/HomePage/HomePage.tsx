@@ -12,7 +12,7 @@ import styles from './HomePage.css';
 
 /**
  * Home Page component displaying when the user click on the 'My Player' icon
- * @returns The content of the home page
+ * @returns A cards' list from json file, a player component
  */
 const HomePage = () => {
   const [rxPlayer, setRxPlayer] = useState<RxPlayer | null>(null);
@@ -27,7 +27,6 @@ const HomePage = () => {
         onClickCard={(value: VideoContentInterface) => onLoadVideo(rxPlayer, value)}
       />
       <Player rxPlayer={rxPlayer} onChangeRxPlayer={onChangeRxPlayer} />
-      <AdditionalSections />
     </div>
   );
 };
@@ -38,11 +37,15 @@ const HomePage = () => {
  */
 function onLoadVideo(rxPlayer: RxPlayer | null, video: VideoContentInterface) {
   if (rxPlayer) {
-    rxPlayer.loadVideo({
-      url: video.url,
-      transport: video.transport,
-      autoPlay: false
-    });
+    if (video.transport === 'directfile') {
+      rxPlayer.loadVideo({
+        url: video.url,
+        transport: video.transport,
+        autoPlay: false
+      });
+    } else {
+      alert("Impossible de lire une video dont le protocole de transport est en 'dash'");
+    }
   } else {
     console.log(
       '🚀 ~ file: HomePage.tsx:27 ~ onLoadVideo ~ player is not defined to load video'

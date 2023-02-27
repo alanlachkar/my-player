@@ -18,7 +18,7 @@ const NavigationBar = () => {
         </Link>
         <ButtonGroup variant="text" aria-label="navigation top bar">
           <Button>
-            <Link to="/my-list">Ma liste</Link>
+            <Link to="/bonus-section">Bonus</Link>
           </Button>
           <Button>
             <Link to="/series">Séries</Link>

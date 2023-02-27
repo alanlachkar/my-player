@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import MainPage from './pages/MainPage/MainPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import MoviesPage from './pages/MoviesPage/MoviesPage';
+import AdditionalSections from './components/AdditionalSections/AdditionalSections';
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       {
-        path: 'my-list',
-        element: <p>My List</p>
+        path: 'bonus-section',
+        element: <AdditionalSections />
       },
       {
         path: 'series',

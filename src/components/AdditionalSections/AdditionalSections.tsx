@@ -6,6 +6,8 @@ import TimeCodeSelector from './TimeCodeSelector/TimeCodeSelector';
 // Utils imports
 import sceneService from '../../api/scene.service';
 import { PersonInterface, ReactionInterface, SceneInterface } from '../../types';
+//Css imports
+import styles from './AdditionalSections.css';
 
 /**
  * Display the multiple additonal sections (usually, just the scene according to a timeCode)
@@ -30,11 +32,11 @@ const AdditionalSections = (): JSX.Element => {
       />
       {loading && <CircularProgress />}
       {scene && scene.id ? (
-        <section>
+        <section className={styles.sectionContainer}>
           <p>id: {scene.id}</p>
           <p>title: {scene.title}</p>
           {scene.casting && (
-            <details>
+            <details className={styles.details}>
               <summary>Casting</summary>
               {scene.casting.map((person: PersonInterface) => (
                 <section key={person.id}>
@@ -49,7 +51,7 @@ const AdditionalSections = (): JSX.Element => {
 
           <p>image: {scene.image}</p>
           {scene.reactions && (
-            <details>
+            <details className={styles.details}>
               <summary>Reactions</summary>
               {scene.reactions.map((reaction: ReactionInterface) => (
                 <section key={`${reaction.name}_${reaction.timecode}`}>
