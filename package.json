@@ -103,6 +103,8 @@
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "gh-pages:linux": "yarn build && rm -rf docs && mv dist docs",
+    "gh-pages:windows": "yarn build && rd /s /q docs && move dist docs",
     "cy:open": "cypress open --e2e",
     "cy:run": "cypress run --e2e",
     "it": "start-server-and-test start http://localhost:8082 cy:run",

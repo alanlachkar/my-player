@@ -1,0 +1,123 @@
+.TimeBar_countingText_Tgtww {
+  color: #ddd;
+  font-size: 0.8rem !important;
+  padding: 0 8px;
+}
+.PlayButton_icon_Gy7pM,
+.VolumeButton_icon_t9B_c {
+  color: #ddd;
+}
+.VolumeButton_sliderContainer_lJlPo {
+  width: 150px;
+}
+.VideoControls_container_Tq3bu {
+  align-items: center;
+  background: linear-gradient(
+    0deg,
+    #283232,
+    rgba(47, 79, 79, 0.5) 95%,
+    rgba(0, 0, 0, 0.15)
+  );
+  display: flex;
+  justify-content: center;
+}
+.FullScreenButton_icon_U0E4L,
+.VideoControls_icon_ULe7e {
+  color: #ddd;
+}
+.Player_videoSpinner_MgTQt {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+.Player_vid_rmC3e {
+  background-color: #000;
+  object-fit: scale-down;
+  object-position: center;
+  width: 100%;
+}
+.Player_videoControlsContrainer_xCza2 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.Player_videoWrapper_EJcXx {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+.MyCard_container_OhiGy:hover {
+  cursor: pointer;
+}
+.MyCard_picture_nUsCG {
+  object-fit: scale-down !important;
+}
+.CardList_container_pEGAZ {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px;
+}
+.HomePage_container_NrE4r {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.HomePage_playerContainer_GFuNZ {
+  height: 800px;
+}
+.NavigationBar_container_UYD6_ {
+  align-items: center;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+.NavigationBar_iconAndNav_sUeFx {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+}
+.NavigationBar_icon_YZ3L5 {
+  transition: box-shadow 0.3s;
+}
+.NavigationBar_icon_YZ3L5:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
+.TimeCodeSelector_container_umTlT {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.TimeCodeSelector_timeCodeSelector_NN1fa {
+  display: flex;
+  gap: 8px;
+}
+.AdditionalSections_sectionContainer_J1gfm {
+  margin: 0 24px;
+}
+.AdditionalSections_details_wa0bf {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 4px 16px;
+  padding: 0.5em 0.5em 0;
+}
+.AdditionalSections_details_wa0bf section {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 4px;
+}
+.AdditionalSections_details_wa0bf summary {
+  font-weight: 700;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+details[open] {
+  padding: 0.5em;
+}
