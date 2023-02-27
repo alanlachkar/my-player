@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import RxPlayer from 'rx-player';
+import { IAvailableVideoTrack } from 'rx-player/dist/_esm5.processed/public_types';
 import VideoControls from '../VideoControls/VideoControls';
 import styles from './Player.css';
 

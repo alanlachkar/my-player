@@ -48,7 +48,7 @@ const TimeBar = (props: TimeBarProperties): JSX.Element => {
         min={0}
         step={1}
         max={duration}
-        onChange={(_: Event, value: number | number[]) => setPosition(value as number)}
+        onChange={(_: Event, value: number | number[]) => player.seekTo(value as number)}
       />
       <Typography className={styles.countingText}>
         -{formatDuration(duration - position)}

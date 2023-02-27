@@ -3,7 +3,6 @@ import { useState } from 'react';
 // Component imports
 import Player from '../../components/Player/Player';
 import CardList from '../../components/CardsList/CardList';
-import AdditionalSections from '../../components/AdditionalSections/AdditionalSections';
 // Utils imports
 import RxPlayer from 'rx-player';
 import { VideoContentInterface } from '../../types';
