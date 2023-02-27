@@ -19,7 +19,11 @@ Ne soyez pas trop méchant sur le visuel !
 
 Mise en place et utilisation de la librairie react-router après ne pas l'avoir utilisé pendant loooongtemps ! Donc j'ai voulu voir ce que avait changé.
 Mise en place et utilisation de la librairie rx-player.
+
 Le choix d'architecture est expliqué plus bas.
+Une configuration de tests Jest et Cypress a été mise en place. Des tests simples (en Jest et Cypress) ont été fait.
+Une CI a été mise en place sur le project (via un github-action) buildant et lançant les tests.
+Également via une github-action une mise à jour des dépendances est lancé hébomadairement.
 
 ---
 
