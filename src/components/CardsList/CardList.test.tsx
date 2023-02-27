@@ -17,7 +17,7 @@ describe('Post component suites tests', () => {
   test('Verify displayed', () => {
     expect(container).toBeInTheDocument();
     expect(screen.getAllByTestId('cardList').length).toEqual(1);
-    expect(screen.getByText('Big Buck Bunny')).toBeVisible();
-    expect(screen.getByText('In the movie VS In real life !')).toBeVisible();
+    expect(screen.getAllByText('Big Buck Bunny').length).toEqual(4);
+    expect(screen.getAllByText('In the movie VS In real life !').length).toEqual(4);
   });
 });
