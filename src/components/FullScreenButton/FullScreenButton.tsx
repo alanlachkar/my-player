@@ -2,8 +2,7 @@
 import { useState } from 'react';
 // Component imports
 import { IconButton } from '@mui/material';
-import { FullscreenExit } from '@mui/icons-material';
-import FullScreen from '@mui/icons-material/FullScreen';
+import { FullscreenExit, Fullscreen } from '@mui/icons-material';
 // Css imports
 import styles from './FullScreenButton.css';
 
@@ -32,7 +31,7 @@ const FullScreenButton = (props: FullScreenProperties) => {
       {isInFullScreen ? (
         <FullscreenExit className={styles.icon} />
       ) : (
-        <FullScreen className={styles.icon} />
+        <Fullscreen className={styles.icon} />
       )}
     </IconButton>
   );

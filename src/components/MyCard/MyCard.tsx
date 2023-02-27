@@ -28,7 +28,7 @@ const MyCard = (props: MyCardProperties) => {
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   return (
     <Card
-      sx={{ maxWidth: 250 }}
+      sx={{ maxWidth: 550 }}
       onClick={() => props.onClickCard(video.videoContent)}
       className={styles.container}
       data-testid={`card_${video.id}`}
