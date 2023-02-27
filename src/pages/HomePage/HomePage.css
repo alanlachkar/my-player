@@ -3,3 +3,8 @@
   flex-direction: column;
   gap: 16px;
 }
+
+/* style only for anchor effect */
+.playerContainer {
+  height: 800px;
+}

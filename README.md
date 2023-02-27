@@ -2,11 +2,30 @@
 
 This project is based on Canal+ technical test instructions.
 
-<ins>Goal:</ins> Create a minimalist player with React and rx-player. An access to a specific video stream is granted.
+<ins>Goal:</ins> Create a minimalist player with React and rx-player by using google api for video stream.
+
+---
+
+2 pages sont importantes :
+
+- Le root `/` de l'URL mène à la HomePage. Elle est accessible sur le clic de l'icône en haut à gauche. Elle affiche une liste (venant d'un json) et le player en dessous;
+- Le `/bonus-section` de l'URL mène à la page utilisant l'API `/scene/{timecode}`/cypress
+
+Au clic d'une carte, l'url correspondant est chargé dans le player et les controleurs du player sont accessibles (s'il s'agit d'une video 'directfile')
+
+Ne soyez pas trop méchant sur le visuel !
+
+---
+
+Mise en place et utilisation de la librairie react-router après ne pas l'avoir utilisé pendant loooongtemps ! Donc j'ai voulu voir ce que avait changé.
+Mise en place et utilisation de la librairie rx-player.
+Le choix d'architecture est expliqué plus bas.
+
+---
 
 ## Introduction and project configuration
 
-My Player is designed for minimum configuration (using react-query and react-router libraries) and **you can use all you need**:
+My Player is designed for minimum configuration and **you can use all you need**:
 
 - React API 18 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 - Typescript [TS](https://www.typescriptlang.org/).

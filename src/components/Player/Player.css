@@ -1,3 +1,9 @@
+.videoSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 .vid {
   background-color: black;
   object-fit: scale-down;

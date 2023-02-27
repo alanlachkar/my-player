@@ -4,8 +4,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import VideoControls from '../VideoControls/VideoControls';
 // Utils imports
 import RxPlayer from 'rx-player';
+import { EVideoState } from '../../utils/enums/enums';
 // Css imports
 import styles from './Player.css';
+import { CircularProgress } from '@mui/material';
 
 /**
  * Interface of Player component
@@ -25,22 +27,26 @@ interface PlayerProperties {
 const Player = (props: PlayerProperties) => {
   const { rxPlayer } = props;
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [videoState, setVideoState] = useState<EVideoState>(EVideoState.NONE);
 
   const videoWrapper = useRef<HTMLDivElement | null>(null);
   const videoElement = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const player = new RxPlayer({ videoElement: videoElement.current });
-    playerWatcher(player, setIsLoaded);
+    playerWatcher(player, setIsLoaded, setVideoState);
     props.onChangeRxPlayer(player);
 
     return () => {
-      playerStopWatcher(player, setIsLoaded);
+      playerStopWatcher(player, setIsLoaded, setVideoState);
     };
   }, []);
 
   return (
     <div className={styles.videoWrapper} ref={videoWrapper}>
+      {videoState === EVideoState.LOADING && (
+        <CircularProgress className={styles.videoSpinner} color="success" />
+      )}
       <video className={styles.vid} ref={videoElement}></video>
       {rxPlayer && isLoaded && (
         <div className={styles.videoControlsContrainer}>
@@ -91,16 +97,15 @@ function onPlay(rxPlayer: RxPlayer | null): void {
  * Function gathering all the events' listener and stop them during the unmounting of the component
  * @param rxPlayer the rx player
  * @param setIsLoaded Function used to update isLoaded state
+ * @param setVideoState Function used to update videoState state
  */
 function playerStopWatcher(
   rxPlayer: RxPlayer,
-  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
+  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>,
+  setVideoState: React.Dispatch<React.SetStateAction<EVideoState>>
 ): void {
   rxPlayer.removeEventListener('playerStateChange', (state) =>
-    onPlayerStateChange(state, setIsLoaded)
-  );
-  rxPlayer.removeEventListener('error', (err) =>
-    console.log('the error content stopped due to unmounting of the component', err)
+    onPlayerStateChange(state, setIsLoaded, setVideoState)
   );
 }
 
@@ -108,30 +113,34 @@ function playerStopWatcher(
  * Function gathering all the events' listener and start them during the mounting of the component
  * @param rxPlayer the rx player
  * @param setIsLoaded Function used to update isLoaded state
+ * @param setVideoState Function used to update videoState state
  */
 function playerWatcher(
   rxPlayer: RxPlayer,
-  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
+  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>,
+  setVideoState: React.Dispatch<React.SetStateAction<EVideoState>>
 ): void {
   console.log('🚀 ~ file: HomePage.tsx:14 ~ useEffect ~ player:', rxPlayer);
 
   rxPlayer.addEventListener('playerStateChange', (state) =>
-    onPlayerStateChange(state, setIsLoaded)
+    onPlayerStateChange(state, setIsLoaded, setVideoState)
   );
-  rxPlayer.addEventListener('error', (err) => {
-    console.log('the content stopped with the following error', err);
-  });
 }
 
 /**
  * Function used to display the current video's state
  * @param state the video's state
  * @param setIsLoaded Function used to update isLoaded state
+ * @param setVideoState Function used to update videoState state
  */
 function onPlayerStateChange(
   state: string,
-  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
+  setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>,
+  setVideoState: React.Dispatch<React.SetStateAction<EVideoState>>
 ): void {
+  if (state === ('STOPPED' || 'LOADING' || 'LOADED' || 'PLAYING' || 'PAUSED')) {
+    setVideoState(EVideoState[state]);
+  }
   switch (state) {
     case 'STOPPED':
       console.log('STOPPED: No content is/will be playing');
@@ -141,7 +150,7 @@ function onPlayerStateChange(
       break;
     case 'LOADED':
       console.log('LOADED: The new content is loaded and ready to be played');
-      setIsLoaded((old) => !old);
+      setIsLoaded((oldSate) => !oldSate);
       break;
     case 'PLAYING':
       console.log('PLAYING: The content is currently playing');

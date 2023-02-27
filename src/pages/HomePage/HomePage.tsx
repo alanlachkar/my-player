@@ -25,7 +25,9 @@ const HomePage = () => {
       <CardList
         onClickCard={(value: VideoContentInterface) => onLoadVideo(rxPlayer, value)}
       />
-      <Player rxPlayer={rxPlayer} onChangeRxPlayer={onChangeRxPlayer} />
+      <div className={styles.playerContainer} id="playerContainerAnchor">
+        <Player rxPlayer={rxPlayer} onChangeRxPlayer={onChangeRxPlayer} />
+      </div>
     </div>
   );
 };
@@ -37,14 +39,25 @@ const HomePage = () => {
  */
 function onLoadVideo(rxPlayer: RxPlayer | null, video: VideoContentInterface) {
   if (rxPlayer) {
+    // Only load a directfile transport protocol because no time
     if (video.transport === 'directfile') {
-      rxPlayer.loadVideo({
-        url: video.url,
-        transport: video.transport,
-        autoPlay: false
-      });
+      // Don't reload video if it is the same previous url
+      if (rxPlayer.getUrl() !== video.url) {
+        rxPlayer.loadVideo({
+          url: video.url,
+          transport: video.transport,
+          autoPlay: false
+        });
+      }
+      // Go to the player at the bottom of this page
+      const top = document.getElementById('playerContainerAnchor')?.offsetTop; //Getting Y of target element
+      if (top) {
+        window.scrollTo(0, top - window.innerHeight / 4);
+      }
     } else {
-      alert("Impossible de lire une video dont le protocole de transport est en 'dash'");
+      alert(
+        "Impossible de lire la video si le protocole de transport est en 'dash'. \n Essayez avec une autre video"
+      );
     }
   } else {
     console.log(
