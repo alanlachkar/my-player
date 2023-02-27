@@ -2,7 +2,6 @@
 import { useState } from 'react';
 // Component imports
 import Card from '@mui/material/Card/Card';
-import CardMedia from '@mui/material/CardMedia/CardMedia';
 import IconButton from '@mui/material/IconButton/IconButton';
 import Typography from '@mui/material/Typography/Typography';
 import CardActions from '@mui/material/CardActions/CardActions';
@@ -12,33 +11,28 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import NotFavoriteIcon from '@mui/icons-material/FavoriteBorder';
 // Css import
 import styles from './MyCard.css';
+import { VideoInterface, VideoContentInterface } from 'src/types';
 
 interface MyCardProperties {
-  onClickCard: (value: string) => void;
-  videoName: string;
-  posterPicture: string;
+  onClickCard: (value: VideoContentInterface) => void;
+  video: VideoInterface;
 }
 
 const MyCard = (props: MyCardProperties) => {
-  const { videoName } = props;
+  const { video } = props;
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
   return (
     <Card
       sx={{ maxWidth: 250 }}
-      onClick={() => props.onClickCard(videoName)}
+      onClick={() => props.onClickCard(video.videoContent)}
       className={styles.container}
     >
-      <CardMedia
-        className={styles.picture}
-        component="img"
-        height="194"
-        image={props.posterPicture}
-        alt={`poster of ${videoName}`}
-      />
+      <Typography variant="h5" component="div" style={{ margin: '4px 16px 0px 8px' }}>
+        {video.title}
+      </Typography>
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Cela raconte l'histoire d'un lapin se faisant embêter par 3 rongeurs et qui
-          contre-attaque par la suite. Il ne vaut mieux pas le chercher.
+          {video.summary}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>

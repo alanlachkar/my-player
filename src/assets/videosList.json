@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Big Buck Bunny",
+    "videoContent": {
+      "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "transport": "directfile"
+    },
+    "summary": "Cela raconte l'histoire d'un lapin se faisant embêter par 3 rongeurs et qui contre-attaque par la suite. Il ne vaut mieux pas le chercher."
+  },
+  {
+    "id": 2,
+    "title": "In the movie VS In real life !",
+    "videoContent": {
+      "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "transport": "dash"
+    },
+    "summary": "Court métrage humouristique comparant les actions dans les films et les mêmes dans la vraie vie"
+  }
+]

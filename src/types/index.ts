@@ -21,4 +21,22 @@ interface ReactionInterface {
   timecode: number;
 }
 
-export { SceneInterface, PersonInterface, ReactionInterface };
+interface VideoInterface {
+  id: number;
+  title: string;
+  videoContent: VideoContentInterface;
+  summary: string;
+}
+
+interface VideoContentInterface {
+  url: string;
+  transport: string;
+}
+
+export {
+  SceneInterface,
+  PersonInterface,
+  ReactionInterface,
+  VideoInterface,
+  VideoContentInterface
+};

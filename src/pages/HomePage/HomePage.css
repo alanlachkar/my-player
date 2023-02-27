@@ -3,29 +3,6 @@
   flex-direction: column;
 }
 
-.bkg {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-  position: relative;
-}
-
-.vid {
-  background-color: black;
-  object-fit: scale-down;
-  object-position: center;
-  width: 100%;
-}
-
-.videoControlsContrainer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
 section {
   margin: 0px 24px;
 }
