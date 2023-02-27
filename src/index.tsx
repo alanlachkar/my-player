@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage/HomePage';
 import MainPage from './pages/MainPage/MainPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import MoviesPage from './pages/MoviesPage/MoviesPage';
+import SeriesPage from './pages/SeriesPage/SeriesPage';
 import AdditionalSections from './components/AdditionalSections/AdditionalSections';
 
 const router = createBrowserRouter([
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'series',
-        element: <p>Series</p>
+        element: <SeriesPage />
       },
       {
         path: 'movies',
