@@ -1,13 +1,13 @@
 // React imports
 import React, { useEffect, useRef, useState } from 'react';
 // Component imports
+import { CircularProgress } from '@mui/material';
 import VideoControls from '../VideoControls/VideoControls';
 // Utils imports
 import RxPlayer from 'rx-player';
 import { EVideoState } from '../../utils/enums/enums';
 // Css imports
 import styles from './Player.css';
-import { CircularProgress } from '@mui/material';
 
 /**
  * Interface of Player component
