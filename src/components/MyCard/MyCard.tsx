@@ -1,14 +1,9 @@
 // React imports
 import { useState } from 'react';
 // Component imports
-import Card from '@mui/material/Card/Card';
-import IconButton from '@mui/material/IconButton/IconButton';
-import Typography from '@mui/material/Typography/Typography';
-import CardActions from '@mui/material/CardActions/CardActions';
-import CardContent from '@mui/material/CardContent/CardContent';
+import { IconButton, Card, Typography, CardActions, CardContent } from '@mui/material';
 // Icon imports
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import NotFavoriteIcon from '@mui/icons-material/FavoriteBorder';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
 // Css import
 import styles from './MyCard.css';
 import { VideoInterface, VideoContentInterface } from 'src/types';
@@ -26,8 +21,14 @@ const MyCard = (props: MyCardProperties) => {
       sx={{ maxWidth: 250 }}
       onClick={() => props.onClickCard(video.videoContent)}
       className={styles.container}
+      data-testid={`card_${video.id}`}
     >
-      <Typography variant="h5" component="div" style={{ margin: '4px 16px 0px 8px' }}>
+      <Typography
+        variant="h5"
+        component="div"
+        style={{ margin: '4px 16px 0px 8px' }}
+        data-testid={`card_${video.id}_title`}
+      >
         {video.title}
       </Typography>
       <CardContent>
@@ -43,7 +44,7 @@ const MyCard = (props: MyCardProperties) => {
             setIsFavorite((oldIsFavorite: boolean) => !oldIsFavorite);
           }}
         >
-          {isFavorite ? <FavoriteIcon /> : <NotFavoriteIcon />}
+          {isFavorite ? <Favorite /> : <FavoriteBorder />}
         </IconButton>
       </CardActions>
     </Card>

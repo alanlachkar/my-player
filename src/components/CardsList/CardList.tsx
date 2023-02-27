@@ -10,7 +10,7 @@ interface CardListProperties {
 const CardList = (props: CardListProperties) => {
   const videoList = useRef(videosList);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="cardList">
       {videoList.current.map((video: VideoInterface) => {
         return <MyCard key={video.id} onClickCard={props.onClickCard} video={video} />;
       })}
