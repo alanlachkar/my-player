@@ -2,11 +2,34 @@
 
 This project is based on Canal+ technical test instructions.
 
-<ins>Goal:</ins> Create a minimalist player with React and rx-player. An access to a specific video stream is granted.
+<ins>Goal:</ins> Create a minimalist player with React and rx-player by using google api for video stream.
+
+---
+
+2 pages sont importantes :
+
+- Le root `/` de l'URL mène à la HomePage. Elle est accessible sur le clic de l'icône en haut à gauche. Elle affiche une liste (venant d'un json) et le player en dessous;
+- Le `/bonus-section` de l'URL mène à la page utilisant l'API `/scene/{timecode}`/cypress
+
+Au clic d'une carte, l'url correspondant est chargé dans le player et les controleurs du player sont accessibles (s'il s'agit d'une video 'directfile')
+
+Ne soyez pas trop méchant sur le visuel !
+
+---
+
+Mise en place et utilisation de la librairie react-router après ne pas l'avoir utilisé pendant loooongtemps ! Donc j'ai voulu voir ce que avait changé.
+Mise en place et utilisation de la librairie rx-player.
+
+Le choix d'architecture est expliqué plus bas.
+Une configuration de tests Jest et Cypress a été mise en place. Des tests simples (en Jest et Cypress) ont été fait.
+Une CI a été mise en place sur le project (via un github-action) buildant et lançant les tests.
+Également via une github-action une mise à jour des dépendances est lancé hébomadairement.
+
+---
 
 ## Introduction and project configuration
 
-My Player is designed for minimum configuration (using react-query and react-router libraries) and **you can use all you need**:
+My Player is designed for minimum configuration and **you can use all you need**:
 
 - React API 18 with Hooks [React hooks](https://fr.reactjs.org/docs/hooks-intro.html).
 - Typescript [TS](https://www.typescriptlang.org/).
@@ -22,8 +45,6 @@ My Player is designed for minimum configuration (using react-query and react-rou
 - Mochawesome report cypress HTML and NYC coverage report
 - Axios for request HTTP handling data
 - dotenv to configure .env
-
-
 
 ## Pre installation (toolings)
 
@@ -44,8 +65,6 @@ This plugin is used to help you to develop and add rules to stylesheet your codi
 - Git hooks
 
 Run the .bat script in `<GIT_DIRECTORY>/.git-hooks` to instanciate the git hooks configuration on your project.
-
-
 
 # Installation
 
@@ -75,7 +94,7 @@ Don't forget to run `yarn install` to install all dependencies.
 | `src/assets/**`                 | The static assets exported to index.tsx if the latters doesn't exceed 5kb                          |
 | `src/api/**`                    | Services API for managing all api requests, all data requests and response data                    |
 | `src/pages/**`                  | Core application                                                                                   |
-| `src/pages/App.tsx`             | Main application routes, components that need to be mounted at all times                           |
+| `src/pages/MainPage.tsx`        | Main application routes, components that need to be mounted at all times                           |
 | `src/components/**`             | Directory use for independant components reusable                                                  |
 | `src/types/**`                  | Interface use to define Model structures                                                           |
 | `src/utils/**`                  | All the utility, helpers, constants and enums that can be used across the application              |

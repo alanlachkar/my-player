@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid black 1px;
+  padding: 0px 8px;
+}
+
+.iconAndNav {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.icon {
+  transition: box-shadow 0.3s;
+}
+
+.icon:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+}
