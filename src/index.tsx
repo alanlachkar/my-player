@@ -1,7 +1,7 @@
 // React imports
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 // Component imports
 import HomePage from './pages/HomePage/HomePage';
 import MainPage from './pages/MainPage/MainPage';
@@ -10,7 +10,7 @@ import MoviesPage from './pages/MoviesPage/MoviesPage';
 import SeriesPage from './pages/SeriesPage/SeriesPage';
 import AdditionalSections from './components/AdditionalSections/AdditionalSections';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <MainPage />,
