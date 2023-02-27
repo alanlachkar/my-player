@@ -1,7 +1,6 @@
 // React imports
 import { useState } from 'react';
 // Component import
-import { CircularProgress } from '@mui/material';
 import TimeCodeSelector from './TimeCodeSelector/TimeCodeSelector';
 // Utils imports
 import sceneService from '../../api/scene.service';
@@ -22,6 +21,7 @@ const AdditionalSections = (): JSX.Element => {
       <h1>Additional Sections</h1>
       <h2>Scene details according to timeCode</h2>
       <TimeCodeSelector
+        isLoading={loading}
         onClick={(timeCode: string) => {
           setLoading(true);
           sceneService.getScene(Number(timeCode)).then((value: SceneInterface) => {
@@ -30,7 +30,6 @@ const AdditionalSections = (): JSX.Element => {
           });
         }}
       />
-      {loading && <CircularProgress />}
       {scene && scene.id ? (
         <section className={styles.sectionContainer}>
           <p>id: {scene.id}</p>
