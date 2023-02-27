@@ -1,7 +1,7 @@
 // Component imports
 import CardList from '../..//components/CardsList/CardList';
 // Utils imports
-import { VideoContentInterface } from 'src/types';
+import { VideoContentInterface } from '../../types';
 
 const MoviesPage = () => {
   return (
