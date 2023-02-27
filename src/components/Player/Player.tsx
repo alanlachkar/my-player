@@ -1,14 +1,27 @@
+// React imports
 import React, { useEffect, useRef, useState } from 'react';
-import RxPlayer from 'rx-player';
-import { IAvailableVideoTrack } from 'rx-player/dist/_esm5.processed/public_types';
+// Component imports
 import VideoControls from '../VideoControls/VideoControls';
+// Utils imports
+import RxPlayer from 'rx-player';
+// Css imports
 import styles from './Player.css';
 
+/**
+ * Interface of Player component
+ * rxPlayer         - the rx player
+ * onChangeRxPlayer - Function used to update the rx player state from parent
+ */
 interface PlayerProperties {
   rxPlayer: RxPlayer | null;
   onChangeRxPlayer: (newValue: RxPlayer | null) => void;
 }
 
+/**
+ * Display the player component with its controls (play/pause, volume, fullscreen...)
+ * @param props Properties of Player component
+ * @returns Player component
+ */
 const Player = (props: PlayerProperties) => {
   const { rxPlayer } = props;
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -51,7 +64,7 @@ const Player = (props: PlayerProperties) => {
 function stopVideo(
   rxPlayer: RxPlayer | null,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
-) {
+): void {
   rxPlayer?.stop();
   setIsLoaded((old) => !old);
 }
@@ -60,7 +73,7 @@ function stopVideo(
  * Function used to play/pause the video
  * @param rxPlayer the rx player
  */
-function onPlay(rxPlayer: RxPlayer | null) {
+function onPlay(rxPlayer: RxPlayer | null): void {
   if (rxPlayer) {
     if (rxPlayer.getPlayerState() === 'PLAYING') {
       rxPlayer.pause();
@@ -82,7 +95,7 @@ function onPlay(rxPlayer: RxPlayer | null) {
 function playerStopWatcher(
   rxPlayer: RxPlayer,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
-) {
+): void {
   rxPlayer.removeEventListener('playerStateChange', (state) =>
     onPlayerStateChange(state, setIsLoaded)
   );
@@ -99,7 +112,7 @@ function playerStopWatcher(
 function playerWatcher(
   rxPlayer: RxPlayer,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
-) {
+): void {
   console.log('🚀 ~ file: HomePage.tsx:14 ~ useEffect ~ player:', rxPlayer);
 
   rxPlayer.addEventListener('playerStateChange', (state) =>
@@ -118,8 +131,7 @@ function playerWatcher(
 function onPlayerStateChange(
   state: string,
   setIsLoaded: React.Dispatch<React.SetStateAction<boolean>>
-) {
-  console.log('🚀 ~ file: HomePage.tsx:113 ~ onPlayerStateChange ~ state:', state);
+): void {
   switch (state) {
     case 'STOPPED':
       console.log('STOPPED: No content is/will be playing');

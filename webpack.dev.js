@@ -8,7 +8,7 @@ require('dotenv').config();
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'source-map', // Recommended choice for development builds with maximum performance.
+  devtool: 'source-map',
   devServer: {
     client: {
       overlay: {

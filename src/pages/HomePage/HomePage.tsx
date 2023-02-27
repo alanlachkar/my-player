@@ -33,6 +33,7 @@ const HomePage = () => {
 /**
  * Function used to load the video on the rxPlayer
  * @param rxPlayer the rx player
+ * @param video the video's information usefull to load correctly load the video to the rx player
  */
 function onLoadVideo(rxPlayer: RxPlayer | null, video: VideoContentInterface) {
   if (rxPlayer) {

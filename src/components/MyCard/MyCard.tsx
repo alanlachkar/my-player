@@ -8,11 +8,21 @@ import { Favorite, FavoriteBorder } from '@mui/icons-material';
 import styles from './MyCard.css';
 import { VideoInterface, VideoContentInterface } from 'src/types';
 
+/**
+ * Interface of Card component
+ * onClickCard  - Callback when the user click on a card
+ * video        - Video's informations
+ */
 interface MyCardProperties {
   onClickCard: (value: VideoContentInterface) => void;
   video: VideoInterface;
 }
 
+/**
+ * Display video's information as card component
+ * @param props Properties of Card component
+ * @returns Card component
+ */
 const MyCard = (props: MyCardProperties) => {
   const { video } = props;
   const [isFavorite, setIsFavorite] = useState<boolean>(false);

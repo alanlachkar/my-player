@@ -9,6 +9,10 @@ import myPlayer from '../../assets/my-player.png';
 // Css imports
 import styles from './NavigationBar.css';
 
+/**
+ * Display the top navigation bar giving access to the different pages
+ * @returns NavigationBar component
+ */
 const NavigationBar = () => {
   return (
     <div className={styles.container}>
