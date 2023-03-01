@@ -1,15 +1,15 @@
-.container {
+.header {
+  grid-area: nav;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: solid black 1px;
-  padding: 0px 8px;
+  padding: 0px 24px;
 }
 
-.iconAndNav {
+.navigation {
   display: flex;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 16px;
 }
 
 .icon {

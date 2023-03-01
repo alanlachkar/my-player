@@ -33,10 +33,16 @@ interface VideoContentInterface {
   transport: string;
 }
 
+interface NavButton {
+  path: string;
+  text: string;
+}
+
 export {
   SceneInterface,
   PersonInterface,
   ReactionInterface,
   VideoInterface,
-  VideoContentInterface
+  VideoContentInterface,
+  NavButton
 };
