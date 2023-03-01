@@ -70,17 +70,18 @@
 .HomePage_playerContainer_GFuNZ {
   height: 800px;
 }
-.NavigationBar_container_UYD6_ {
+.NavigationBar_header_Hcc4J {
   align-items: center;
+  background-color: lime;
   border-bottom: 1px solid #000;
   display: flex;
-  justify-content: space-between;
-  padding: 0 8px;
+  grid-area: head;
+  justify-content: space-around;
 }
-.NavigationBar_iconAndNav_sUeFx {
+.NavigationBar_navigation_Yv6PJ {
+  align-items: center;
   display: flex;
-  gap: 8px;
-  justify-content: space-between;
+  gap: 16px;
 }
 .NavigationBar_icon_YZ3L5 {
   transition: box-shadow 0.3s;
@@ -88,6 +89,14 @@
 .NavigationBar_icon_YZ3L5:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   cursor: pointer;
+}
+.MainPage_page_rFqzE {
+  display: grid;
+  grid-template: 'head head' 'main main';
+}
+.MainPage_main_Xsrkx {
+  background-color: #ff0;
+  grid-area: main;
 }
 .TimeCodeSelector_container_umTlT {
   align-items: center;

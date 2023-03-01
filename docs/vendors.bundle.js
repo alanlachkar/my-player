@@ -2017,287 +2017,7 @@
           w.jsxs)(V, (0, r.Z)({ as: be, className: (0, o.Z)(Ee.root, v), ownerState: we, onBlur: pe, onClick: k, onContextMenu: oe, onFocus: he, onKeyDown: ge, onKeyUp: ye, onMouseDown: ae, onMouseLeave: le, onMouseUp: ue, onDragLeave: se, onTouchEnd: de, onTouchMove: fe, onTouchStart: ce, ref: Se, tabIndex: g ? -1 : B, type: W }, _e, $, { children: [h, re ? (0, w.jsx)(L, (0, r.Z)({ ref: G, center: p }, F)) : null] }));
         });
     },
-    8044: (e, t, n) => {
-      'use strict';
-      n.d(t, { Z: () => _ });
-      var r = n(3366),
-        i = n(7462),
-        a = n(7294),
-        o = n(6010),
-        s = n(4780),
-        u = n(1796),
-        l = n(8216),
-        c = n(2077),
-        d = n(6122),
-        f = n(1588),
-        p = n(4867);
-      function h(e) {
-        return (0, p.Z)('MuiButtonGroup', e);
-      }
-      const v = (0, f.Z)('MuiButtonGroup', [
-        'root',
-        'contained',
-        'outlined',
-        'text',
-        'disableElevation',
-        'disabled',
-        'fullWidth',
-        'vertical',
-        'grouped',
-        'groupedHorizontal',
-        'groupedVertical',
-        'groupedText',
-        'groupedTextHorizontal',
-        'groupedTextVertical',
-        'groupedTextPrimary',
-        'groupedTextSecondary',
-        'groupedOutlined',
-        'groupedOutlinedHorizontal',
-        'groupedOutlinedVertical',
-        'groupedOutlinedPrimary',
-        'groupedOutlinedSecondary',
-        'groupedContained',
-        'groupedContainedHorizontal',
-        'groupedContainedVertical',
-        'groupedContainedPrimary',
-        'groupedContainedSecondary'
-      ]);
-      var m = n(8363),
-        g = n(5893);
-      const y = [
-          'children',
-          'className',
-          'color',
-          'component',
-          'disabled',
-          'disableElevation',
-          'disableFocusRipple',
-          'disableRipple',
-          'fullWidth',
-          'orientation',
-          'size',
-          'variant'
-        ],
-        b = (0, c.ZP)('div', {
-          name: 'MuiButtonGroup',
-          slot: 'Root',
-          overridesResolver: (e, t) => {
-            const { ownerState: n } = e;
-            return [
-              { [`& .${v.grouped}`]: t.grouped },
-              { [`& .${v.grouped}`]: t[`grouped${(0, l.Z)(n.orientation)}`] },
-              { [`& .${v.grouped}`]: t[`grouped${(0, l.Z)(n.variant)}`] },
-              {
-                [`& .${v.grouped}`]:
-                  t[`grouped${(0, l.Z)(n.variant)}${(0, l.Z)(n.orientation)}`]
-              },
-              {
-                [`& .${v.grouped}`]:
-                  t[`grouped${(0, l.Z)(n.variant)}${(0, l.Z)(n.color)}`]
-              },
-              t.root,
-              t[n.variant],
-              !0 === n.disableElevation && t.disableElevation,
-              n.fullWidth && t.fullWidth,
-              'vertical' === n.orientation && t.vertical
-            ];
-          }
-        })(({ theme: e, ownerState: t }) =>
-          (0, i.Z)(
-            { display: 'inline-flex', borderRadius: (e.vars || e).shape.borderRadius },
-            'contained' === t.variant && { boxShadow: (e.vars || e).shadows[2] },
-            t.disableElevation && { boxShadow: 'none' },
-            t.fullWidth && { width: '100%' },
-            'vertical' === t.orientation && { flexDirection: 'column' },
-            {
-              [`& .${v.grouped}`]: (0, i.Z)(
-                {
-                  minWidth: 40,
-                  '&:not(:first-of-type)': (0, i.Z)(
-                    {},
-                    'horizontal' === t.orientation && {
-                      borderTopLeftRadius: 0,
-                      borderBottomLeftRadius: 0
-                    },
-                    'vertical' === t.orientation && {
-                      borderTopRightRadius: 0,
-                      borderTopLeftRadius: 0
-                    },
-                    'outlined' === t.variant &&
-                      'horizontal' === t.orientation && { marginLeft: -1 },
-                    'outlined' === t.variant &&
-                      'vertical' === t.orientation && { marginTop: -1 }
-                  ),
-                  '&:not(:last-of-type)': (0, i.Z)(
-                    {},
-                    'horizontal' === t.orientation && {
-                      borderTopRightRadius: 0,
-                      borderBottomRightRadius: 0
-                    },
-                    'vertical' === t.orientation && {
-                      borderBottomRightRadius: 0,
-                      borderBottomLeftRadius: 0
-                    },
-                    'text' === t.variant &&
-                      'horizontal' === t.orientation && {
-                        borderRight: e.vars
-                          ? `1px solid rgba(${e.vars.palette.common.onBackgroundChannel} / 0.23)`
-                          : '1px solid ' +
-                            ('light' === e.palette.mode
-                              ? 'rgba(0, 0, 0, 0.23)'
-                              : 'rgba(255, 255, 255, 0.23)')
-                      },
-                    'text' === t.variant &&
-                      'vertical' === t.orientation && {
-                        borderBottom: e.vars
-                          ? `1px solid rgba(${e.vars.palette.common.onBackgroundChannel} / 0.23)`
-                          : '1px solid ' +
-                            ('light' === e.palette.mode
-                              ? 'rgba(0, 0, 0, 0.23)'
-                              : 'rgba(255, 255, 255, 0.23)')
-                      },
-                    'text' === t.variant &&
-                      'inherit' !== t.color && {
-                        borderColor: e.vars
-                          ? `rgba(${e.vars.palette[t.color].mainChannel} / 0.5)`
-                          : (0, u.Fq)(e.palette[t.color].main, 0.5)
-                      },
-                    'outlined' === t.variant &&
-                      'horizontal' === t.orientation && {
-                        borderRightColor: 'transparent'
-                      },
-                    'outlined' === t.variant &&
-                      'vertical' === t.orientation && {
-                        borderBottomColor: 'transparent'
-                      },
-                    'contained' === t.variant &&
-                      'horizontal' === t.orientation && {
-                        borderRight: `1px solid ${(e.vars || e).palette.grey[400]}`,
-                        [`&.${v.disabled}`]: {
-                          borderRight: `1px solid ${
-                            (e.vars || e).palette.action.disabled
-                          }`
-                        }
-                      },
-                    'contained' === t.variant &&
-                      'vertical' === t.orientation && {
-                        borderBottom: `1px solid ${(e.vars || e).palette.grey[400]}`,
-                        [`&.${v.disabled}`]: {
-                          borderBottom: `1px solid ${
-                            (e.vars || e).palette.action.disabled
-                          }`
-                        }
-                      },
-                    'contained' === t.variant &&
-                      'inherit' !== t.color && {
-                        borderColor: (e.vars || e).palette[t.color].dark
-                      },
-                    {
-                      '&:hover': (0, i.Z)(
-                        {},
-                        'outlined' === t.variant &&
-                          'horizontal' === t.orientation && {
-                            borderRightColor: 'currentColor'
-                          },
-                        'outlined' === t.variant &&
-                          'vertical' === t.orientation && {
-                            borderBottomColor: 'currentColor'
-                          }
-                      )
-                    }
-                  ),
-                  '&:hover': (0, i.Z)(
-                    {},
-                    'contained' === t.variant && { boxShadow: 'none' }
-                  )
-                },
-                'contained' === t.variant && { boxShadow: 'none' }
-              )
-            }
-          )
-        ),
-        _ = a.forwardRef(function (e, t) {
-          const n = (0, d.Z)({ props: e, name: 'MuiButtonGroup' }),
-            {
-              children: u,
-              className: c,
-              color: f = 'primary',
-              component: p = 'div',
-              disabled: v = !1,
-              disableElevation: _ = !1,
-              disableFocusRipple: S = !1,
-              disableRipple: w = !1,
-              fullWidth: E = !1,
-              orientation: k = 'horizontal',
-              size: T = 'medium',
-              variant: x = 'outlined'
-            } = n,
-            A = (0, r.Z)(n, y),
-            Z = (0, i.Z)({}, n, {
-              color: f,
-              component: p,
-              disabled: v,
-              disableElevation: _,
-              disableFocusRipple: S,
-              disableRipple: w,
-              fullWidth: E,
-              orientation: k,
-              size: T,
-              variant: x
-            }),
-            R = ((e) => {
-              const {
-                  classes: t,
-                  color: n,
-                  disabled: r,
-                  disableElevation: i,
-                  fullWidth: a,
-                  orientation: o,
-                  variant: u
-                } = e,
-                c = {
-                  root: [
-                    'root',
-                    u,
-                    'vertical' === o && 'vertical',
-                    a && 'fullWidth',
-                    i && 'disableElevation'
-                  ],
-                  grouped: [
-                    'grouped',
-                    `grouped${(0, l.Z)(o)}`,
-                    `grouped${(0, l.Z)(u)}`,
-                    `grouped${(0, l.Z)(u)}${(0, l.Z)(o)}`,
-                    `grouped${(0, l.Z)(u)}${(0, l.Z)(n)}`,
-                    r && 'disabled'
-                  ]
-                };
-              return (0, s.Z)(c, h, t);
-            })(Z),
-            C = a.useMemo(
-              () => ({
-                className: R.grouped,
-                color: f,
-                disabled: v,
-                disableElevation: _,
-                disableFocusRipple: S,
-                disableRipple: w,
-                fullWidth: E,
-                size: T,
-                variant: x
-              }),
-              [f, v, _, S, w, E, T, x, R.grouped]
-            );
-          return (0,
-          g.jsx)(b, (0, i.Z)({ as: p, role: 'group', className: (0, o.Z)(R.root, c), ref: t, ownerState: Z }, A, { children: (0, g.jsx)(m.Z.Provider, { value: C, children: u }) }));
-        });
-    },
-    8363: (e, t, n) => {
-      'use strict';
-      n.d(t, { Z: () => r });
-      const r = n(7294).createContext({});
-    },
-    2642: (e, t, n) => {
+    6914: (e, t, n) => {
       'use strict';
       n.d(t, { Z: () => T });
       var r = n(3366),
@@ -2365,8 +2085,8 @@
         'iconSizeMedium',
         'iconSizeLarge'
       ]);
-      var y = n(8363),
-        b = n(5893);
+      const y = a.createContext({});
+      var b = n(5893);
       const _ = [
           'children',
           'color',
@@ -2590,7 +2310,7 @@
           )
         ),
         T = a.forwardRef(function (e, t) {
-          const n = a.useContext(y.Z),
+          const n = a.useContext(y),
             l = (0, s.Z)(n, e),
             c = (0, d.Z)({ props: l, name: 'MuiButton' }),
             {
@@ -11190,19 +10910,19 @@
       }
       var i;
       n.d(t, {
-        Ep: () => c,
-        RQ: () => O,
-        WK: () => V,
-        Zn: () => R,
-        Zq: () => I,
+        Ep: () => d,
+        RQ: () => D,
+        WK: () => j,
+        Zn: () => C,
+        Zq: () => M,
         aU: () => i,
-        cP: () => d,
-        fp: () => v,
-        iQ: () => z,
+        cP: () => f,
+        fp: () => m,
+        iQ: () => V,
         kG: () => s,
-        lX: () => o,
-        p7: () => te,
-        pC: () => M
+        p7: () => ne,
+        pC: () => O,
+        q_: () => o
       }),
         (function (e) {
           (e.Pop = 'POP'), (e.Push = 'PUSH'), (e.Replace = 'REPLACE');
@@ -11211,10 +10931,14 @@
       function o(e) {
         return (
           void 0 === e && (e = {}),
-          f(
+          p(
             function (e, t) {
-              let { pathname: n, search: r, hash: i } = e.location;
-              return l(
+              let {
+                pathname: n = '/',
+                search: r = '',
+                hash: i = ''
+              } = f(e.location.hash.substr(1));
+              return c(
                 '',
                 { pathname: n, search: r, hash: i },
                 (t.state && t.state.usr) || null,
@@ -11222,9 +10946,23 @@
               );
             },
             function (e, t) {
-              return 'string' == typeof t ? t : c(t);
+              let n = e.document.querySelector('base'),
+                r = '';
+              if (n && n.getAttribute('href')) {
+                let t = e.location.href,
+                  n = t.indexOf('#');
+                r = -1 === n ? t : t.slice(0, n);
+              }
+              return r + '#' + ('string' == typeof t ? t : d(t));
             },
-            null,
+            function (e, t) {
+              u(
+                '/' === e.pathname.charAt(0),
+                'relative pathnames are not supported in hash history.push(' +
+                  JSON.stringify(t) +
+                  ')'
+              );
+            },
             e
           )
         );
@@ -11233,14 +10971,22 @@
         if (!1 === e || null == e) throw new Error(t);
       }
       function u(e, t) {
+        if (!e) {
+          'undefined' != typeof console && console.warn(t);
+          try {
+            throw new Error(t);
+          } catch (e) {}
+        }
+      }
+      function l(e, t) {
         return { usr: e.state, key: e.key, idx: t };
       }
-      function l(e, t, n, i) {
+      function c(e, t, n, i) {
         return (
           void 0 === n && (n = null),
           r(
             { pathname: 'string' == typeof e ? e : e.pathname, search: '', hash: '' },
-            'string' == typeof t ? d(t) : t,
+            'string' == typeof t ? f(t) : t,
             {
               state: n,
               key: (t && t.key) || i || Math.random().toString(36).substr(2, 8)
@@ -11248,7 +10994,7 @@
           )
         );
       }
-      function c(e) {
+      function d(e) {
         let { pathname: t = '/', search: n = '', hash: r = '' } = e;
         return (
           n && '?' !== n && (t += '?' === n.charAt(0) ? n : '?' + n),
@@ -11256,7 +11002,7 @@
           t
         );
       }
-      function d(e) {
+      function f(e) {
         let t = {};
         if (e) {
           let n = e.indexOf('#');
@@ -11267,10 +11013,10 @@
         }
         return t;
       }
-      function f(e, t, n, o) {
+      function p(e, t, n, o) {
         void 0 === o && (o = {});
-        let { window: d = document.defaultView, v5Compat: f = !1 } = o,
-          p = d.history,
+        let { window: u = document.defaultView, v5Compat: f = !1 } = o,
+          p = u.history,
           h = i.Pop,
           v = null,
           m = g();
@@ -11284,8 +11030,8 @@
           (m = e), v && v({ action: h, location: _.location, delta: t });
         }
         function b(e) {
-          let t = 'null' !== d.location.origin ? d.location.origin : d.location.href,
-            n = 'string' == typeof e ? e : c(e);
+          let t = 'null' !== u.location.origin ? u.location.origin : u.location.href,
+            n = 'string' == typeof e ? e : d(e);
           return (
             s(
               t,
@@ -11300,19 +11046,19 @@
             return h;
           },
           get location() {
-            return e(d, p);
+            return e(u, p);
           },
           listen(e) {
             if (v) throw new Error('A history only accepts one active listener');
             return (
-              d.addEventListener(a, y),
+              u.addEventListener(a, y),
               (v = e),
               () => {
-                d.removeEventListener(a, y), (v = null);
+                u.removeEventListener(a, y), (v = null);
               }
             );
           },
-          createHref: (e) => t(d, e),
+          createHref: (e) => t(u, e),
           createURL: b,
           encodeLocation(e) {
             let t = b(e);
@@ -11320,22 +11066,22 @@
           },
           push: function (e, t) {
             h = i.Push;
-            let r = l(_.location, e, t);
+            let r = c(_.location, e, t);
             n && n(r, e), (m = g() + 1);
-            let a = u(r, m),
+            let a = l(r, m),
               o = _.createHref(r);
             try {
               p.pushState(a, '', o);
             } catch (e) {
-              d.location.assign(o);
+              u.location.assign(o);
             }
             f && v && v({ action: h, location: _.location, delta: 1 });
           },
           replace: function (e, t) {
             h = i.Replace;
-            let r = l(_.location, e, t);
+            let r = c(_.location, e, t);
             n && n(r, e), (m = g());
-            let a = u(r, m),
+            let a = l(r, m),
               o = _.createHref(r);
             p.replaceState(a, '', o),
               f && v && v({ action: h, location: _.location, delta: 0 });
@@ -11344,8 +11090,8 @@
         };
         return _;
       }
-      var p;
-      function h(e, t, n) {
+      var h;
+      function v(e, t, n) {
         return (
           void 0 === t && (t = []),
           void 0 === n && (n = new Set()),
@@ -11372,16 +11118,16 @@
             }
             return r({}, e, {
               id: o,
-              children: e.children ? h(e.children, a, n) : void 0
+              children: e.children ? v(e.children, a, n) : void 0
             });
           })
         );
       }
-      function v(e, t, n) {
+      function m(e, t, n) {
         void 0 === n && (n = '/');
-        let r = R(('string' == typeof t ? d(t) : t).pathname || '/', n);
+        let r = C(('string' == typeof t ? f(t) : t).pathname || '/', n);
         if (null == r) return null;
-        let i = m(e);
+        let i = g(e);
         !(function (e) {
           e.sort((e, t) =>
             e.score !== t.score
@@ -11397,10 +11143,10 @@
           );
         })(i);
         let a = null;
-        for (let e = 0; null == a && e < i.length; ++e) a = x(i[e], Z(r));
+        for (let e = 0; null == a && e < i.length; ++e) a = A(i[e], R(r));
         return a;
       }
-      function m(e, t, n, r) {
+      function g(e, t, n, r) {
         void 0 === t && (t = []), void 0 === n && (n = []), void 0 === r && (r = '');
         let i = (e, i, a) => {
           let o = {
@@ -11419,7 +11165,7 @@
                 '" is not valid. An absolute child route path must start with the combined path of all its parent routes.'
             ),
             (o.relativePath = o.relativePath.slice(r.length)));
-          let u = O([r, o.relativePath]),
+          let u = D([r, o.relativePath]),
             l = n.concat(o);
           e.children &&
             e.children.length > 0 &&
@@ -11429,28 +11175,28 @@
                 u +
                 '".'
             ),
-            m(e.children, t, l, u)),
+            g(e.children, t, l, u)),
             (null != e.path || e.index) &&
-              t.push({ path: u, score: T(u, e.index), routesMeta: l });
+              t.push({ path: u, score: x(u, e.index), routesMeta: l });
         };
         return (
           e.forEach((e, t) => {
             var n;
             if ('' !== e.path && null != (n = e.path) && n.includes('?'))
-              for (let n of g(e.path)) i(e, t, n);
+              for (let n of y(e.path)) i(e, t, n);
             else i(e, t);
           }),
           t
         );
       }
-      function g(e) {
+      function y(e) {
         let t = e.split('/');
         if (0 === t.length) return [];
         let [n, ...r] = t,
           i = n.endsWith('?'),
           a = n.replace(/\?$/, '');
         if (0 === r.length) return i ? [a, ''] : [a];
-        let o = g(r.join('/')),
+        let o = y(r.join('/')),
           s = [];
         return (
           s.push(...o.map((e) => ('' === e ? a : [a, e].join('/')))),
@@ -11463,26 +11209,26 @@
           (e.deferred = 'deferred'),
           (e.redirect = 'redirect'),
           (e.error = 'error');
-      })(p || (p = {}));
-      const y = /^:\w+$/,
-        b = 3,
-        _ = 2,
-        S = 1,
-        w = 10,
-        E = -2,
-        k = (e) => '*' === e;
-      function T(e, t) {
+      })(h || (h = {}));
+      const b = /^:\w+$/,
+        _ = 3,
+        S = 2,
+        w = 1,
+        E = 10,
+        k = -2,
+        T = (e) => '*' === e;
+      function x(e, t) {
         let n = e.split('/'),
           r = n.length;
         return (
-          n.some(k) && (r += E),
-          t && (r += _),
+          n.some(T) && (r += k),
+          t && (r += S),
           n
-            .filter((e) => !k(e))
-            .reduce((e, t) => e + (y.test(t) ? b : '' === t ? S : w), r)
+            .filter((e) => !T(e))
+            .reduce((e, t) => e + (b.test(t) ? _ : '' === t ? w : E), r)
         );
       }
-      function x(e, t) {
+      function A(e, t) {
         let { routesMeta: n } = e,
           r = {},
           i = '/',
@@ -11491,26 +11237,26 @@
           let o = n[e],
             s = e === n.length - 1,
             u = '/' === i ? t : t.slice(i.length) || '/',
-            l = A({ path: o.relativePath, caseSensitive: o.caseSensitive, end: s }, u);
+            l = Z({ path: o.relativePath, caseSensitive: o.caseSensitive, end: s }, u);
           if (!l) return null;
           Object.assign(r, l.params);
           let c = o.route;
           a.push({
             params: r,
-            pathname: O([i, l.pathname]),
-            pathnameBase: D(O([i, l.pathnameBase])),
+            pathname: D([i, l.pathname]),
+            pathnameBase: N(D([i, l.pathnameBase])),
             route: c
           }),
-            '/' !== l.pathnameBase && (i = O([i, l.pathnameBase]));
+            '/' !== l.pathnameBase && (i = D([i, l.pathnameBase]));
         }
         return a;
       }
-      function A(e, t) {
+      function Z(e, t) {
         'string' == typeof e && (e = { path: e, caseSensitive: !1, end: !0 });
         let [n, r] = (function (e, t, n) {
             void 0 === t && (t = !1);
             void 0 === n && (n = !0);
-            C(
+            P(
               '*' === e || !e.endsWith('*') || e.endsWith('/*'),
               'Route path "' +
                 e +
@@ -11554,7 +11300,7 @@
                   return decodeURIComponent(e);
                 } catch (n) {
                   return (
-                    C(
+                    P(
                       !1,
                       'The value for the URL param "' +
                         t +
@@ -11576,12 +11322,12 @@
           pattern: e
         };
       }
-      function Z(e) {
+      function R(e) {
         try {
           return decodeURI(e);
         } catch (t) {
           return (
-            C(
+            P(
               !1,
               'The URL path "' +
                 e +
@@ -11593,14 +11339,14 @@
           );
         }
       }
-      function R(e, t) {
+      function C(e, t) {
         if ('/' === t) return e;
         if (!e.toLowerCase().startsWith(t.toLowerCase())) return null;
         let n = t.endsWith('/') ? t.length - 1 : t.length,
           r = e.charAt(n);
         return r && '/' !== r ? null : e.slice(n) || '/';
       }
-      function C(e, t) {
+      function P(e, t) {
         if (!e) {
           'undefined' != typeof console && console.warn(t);
           try {
@@ -11608,7 +11354,7 @@
           } catch (e) {}
         }
       }
-      function P(e, t, n, r) {
+      function I(e, t, n, r) {
         return (
           "Cannot include a '" +
           e +
@@ -11621,21 +11367,21 @@
           '` field. Alternatively you may provide the full path as a string in <Link to="..."> and the router will parse it for you.'
         );
       }
-      function I(e) {
+      function M(e) {
         return e.filter((e, t) => 0 === t || (e.route.path && e.route.path.length > 0));
       }
-      function M(e, t, n, i) {
+      function O(e, t, n, i) {
         let a;
         void 0 === i && (i = !1),
           'string' == typeof e
-            ? (a = d(e))
+            ? (a = f(e))
             : ((a = r({}, e)),
               s(
                 !a.pathname || !a.pathname.includes('?'),
-                P('?', 'pathname', 'search', a)
+                I('?', 'pathname', 'search', a)
               ),
-              s(!a.pathname || !a.pathname.includes('#'), P('#', 'pathname', 'hash', a)),
-              s(!a.search || !a.search.includes('#'), P('#', 'search', 'hash', a)));
+              s(!a.pathname || !a.pathname.includes('#'), I('#', 'pathname', 'hash', a)),
+              s(!a.search || !a.search.includes('#'), I('#', 'search', 'hash', a)));
         let o,
           u = '' === e || '' === a.pathname,
           l = u ? '/' : a.pathname;
@@ -11655,7 +11401,7 @@
                 pathname: n,
                 search: r = '',
                 hash: i = ''
-              } = 'string' == typeof e ? d(e) : e,
+              } = 'string' == typeof e ? f(e) : e,
               a = n
                 ? n.startsWith('/')
                   ? n
@@ -11669,18 +11415,18 @@
                       );
                     })(n, t)
                 : t;
-            return { pathname: a, search: N(r), hash: L(i) };
+            return { pathname: a, search: L(r), hash: B(i) };
           })(a, o),
-          f = l && '/' !== l && l.endsWith('/'),
+          d = l && '/' !== l && l.endsWith('/'),
           p = (u || '.' === l) && n.endsWith('/');
-        return c.pathname.endsWith('/') || (!f && !p) || (c.pathname += '/'), c;
+        return c.pathname.endsWith('/') || (!d && !p) || (c.pathname += '/'), c;
       }
-      const O = (e) => e.join('/').replace(/\/\/+/g, '/'),
-        D = (e) => e.replace(/\/+$/, '').replace(/^\/*/, '/'),
-        N = (e) => (e && '?' !== e ? (e.startsWith('?') ? e : '?' + e) : ''),
-        L = (e) => (e && '#' !== e ? (e.startsWith('#') ? e : '#' + e) : '');
-      class B extends Error {}
-      class U {
+      const D = (e) => e.join('/').replace(/\/\/+/g, '/'),
+        N = (e) => e.replace(/\/+$/, '').replace(/^\/*/, '/'),
+        L = (e) => (e && '?' !== e ? (e.startsWith('?') ? e : '?' + e) : ''),
+        B = (e) => (e && '#' !== e ? (e.startsWith('#') ? e : '#' + e) : '');
+      class U extends Error {}
+      class F {
         constructor(e, t) {
           let n;
           (this.pendingKeysSet = new Set()),
@@ -11692,7 +11438,7 @@
             ),
             (this.abortPromise = new Promise((e, t) => (n = t))),
             (this.controller = new AbortController());
-          let r = () => n(new B('Deferred data aborted'));
+          let r = () => n(new U('Deferred data aborted'));
           (this.unlistenAbortSignal = () =>
             this.controller.signal.removeEventListener('abort', r)),
             this.controller.signal.addEventListener('abort', r),
@@ -11715,7 +11461,7 @@
           );
         }
         onSettle(e, t, n, r) {
-          return this.controller.signal.aborted && n instanceof B
+          return this.controller.signal.aborted && n instanceof U
             ? (this.unlistenAbortSignal(),
               Object.defineProperty(e, '_error', { get: () => n }),
               Promise.reject(n))
@@ -11764,7 +11510,7 @@
             ),
             Object.entries(this.data).reduce((e, t) => {
               let [n, r] = t;
-              return Object.assign(e, { [n]: F(r) });
+              return Object.assign(e, { [n]: z(r) });
             }, {})
           );
         }
@@ -11772,7 +11518,7 @@
           return Array.from(this.pendingKeysSet);
         }
       }
-      function F(e) {
+      function z(e) {
         if (
           !(function (e) {
             return e instanceof Promise && !0 === e._tracked;
@@ -11782,7 +11528,7 @@
         if (e._error) throw e._error;
         return e._data;
       }
-      class z {
+      class V {
         constructor(e, t, n, r) {
           void 0 === r && (r = !1),
             (this.status = e),
@@ -11793,7 +11539,7 @@
               : (this.data = n);
         }
       }
-      function V(e) {
+      function j(e) {
         return (
           null != e &&
           'number' == typeof e.status &&
@@ -11802,13 +11548,13 @@
           'data' in e
         );
       }
-      const j = ['post', 'put', 'patch', 'delete'],
-        W = new Set(j),
-        $ = ['get', ...j],
-        K = new Set($),
-        H = new Set([301, 302, 303, 307, 308]),
-        G = new Set([307, 308]),
-        q = {
+      const W = ['post', 'put', 'patch', 'delete'],
+        $ = new Set(W),
+        K = ['get', ...W],
+        H = new Set(K),
+        G = new Set([301, 302, 303, 307, 308]),
+        q = new Set([307, 308]),
+        Y = {
           state: 'idle',
           location: void 0,
           formMethod: void 0,
@@ -11816,7 +11562,7 @@
           formEncType: void 0,
           formData: void 0
         },
-        Y = {
+        X = {
           state: 'idle',
           data: void 0,
           formMethod: void 0,
@@ -11824,31 +11570,31 @@
           formEncType: void 0,
           formData: void 0
         },
-        X = { state: 'unblocked', proceed: void 0, reset: void 0, location: void 0 },
-        Q = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
-        J =
+        Q = { state: 'unblocked', proceed: void 0, reset: void 0, location: void 0 },
+        J = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i,
+        ee =
           'undefined' != typeof window &&
           void 0 !== window.document &&
           void 0 !== window.document.createElement,
-        ee = !J;
-      function te(e) {
+        te = !ee;
+      function ne(e) {
         s(
           e.routes.length > 0,
           'You must provide a non-empty routes array to createRouter'
         );
-        let t = h(e.routes),
+        let t = v(e.routes),
           n = null,
           a = new Set(),
           o = null,
           u = null,
-          c = null,
+          l = null,
           d = null != e.hydrationData,
-          f = v(t, e.history.location, e.basename),
-          m = null;
+          f = m(t, e.history.location, e.basename),
+          p = null;
         if (null == f) {
-          let n = ve(404, { pathname: e.history.location.pathname }),
-            { matches: r, route: i } = he(t);
-          (f = r), (m = { [i.id]: n });
+          let n = me(404, { pathname: e.history.location.pathname }),
+            { matches: r, route: i } = ve(t);
+          (f = r), (p = { [i.id]: n });
         }
         let g,
           y,
@@ -11858,13 +11604,13 @@
             location: e.history.location,
             matches: f,
             initialized: b,
-            navigation: q,
+            navigation: Y,
             restoreScrollPosition: null == e.hydrationData && null,
             preventScrollReset: !1,
             revalidation: 'idle',
             loaderData: (e.hydrationData && e.hydrationData.loaderData) || {},
             actionData: (e.hydrationData && e.hydrationData.actionData) || null,
-            errors: (e.hydrationData && e.hydrationData.errors) || m,
+            errors: (e.hydrationData && e.hydrationData.errors) || p,
             fetchers: new Map(),
             blockers: new Map()
           },
@@ -11877,7 +11623,7 @@
           A = new Map(),
           Z = 0,
           R = -1,
-          P = new Map(),
+          C = new Map(),
           I = new Set(),
           M = new Map(),
           O = new Map(),
@@ -11892,7 +11638,7 @@
             u =
               null != _.actionData &&
               null != _.navigation.formMethod &&
-              Ee(_.navigation.formMethod) &&
+              ke(_.navigation.formMethod) &&
               'loading' === _.navigation.state &&
               !0 !== (null == (a = t.state) ? void 0 : a._isRedirect);
           s = n.actionData
@@ -11903,13 +11649,13 @@
             ? _.actionData
             : null;
           let l = n.loaderData
-            ? fe(_.loaderData, n.loaderData, n.matches || [], n.errors)
+            ? pe(_.loaderData, n.loaderData, n.matches || [], n.errors)
             : _.loaderData;
-          for (let [e] of D) re(e);
+          for (let [e] of D) ne(e);
           let c =
             !0 === w ||
             (null != _.navigation.formMethod &&
-              Ee(_.navigation.formMethod) &&
+              ke(_.navigation.formMethod) &&
               !0 !== (null == (o = t.state) ? void 0 : o._isRedirect));
           L(
             r({}, n, {
@@ -11918,7 +11664,7 @@
               historyAction: S,
               location: t,
               initialized: !0,
-              navigation: q,
+              navigation: Y,
               revalidation: 'idle',
               restoreScrollPosition: ce(t, n.matches || _.matches),
               preventScrollReset: c,
@@ -11937,61 +11683,61 @@
             (T = []),
             (x = []);
         }
-        async function U(n, a, l) {
+        async function U(n, a, c) {
           y && y.abort(),
             (y = null),
             (S = n),
-            (E = !0 === (l && l.startUninterruptedRevalidation)),
+            (E = !0 === (c && c.startUninterruptedRevalidation)),
             (function (e, t) {
-              if (o && u && c) {
-                let n = t.map((e) => Ae(e, _.loaderData)),
+              if (o && u && l) {
+                let n = t.map((e) => Ze(e, _.loaderData)),
                   r = u(e, n) || e.key;
-                o[r] = c();
+                o[r] = l();
               }
             })(_.location, _.matches),
-            (w = !0 === (l && l.preventScrollReset));
-          let d = l && l.overrideNavigation,
-            f = v(t, a, e.basename);
+            (w = !0 === (c && c.preventScrollReset));
+          let d = c && c.overrideNavigation,
+            f = m(t, a, e.basename);
           if (!f) {
-            let e = ve(404, { pathname: a.pathname }),
-              { matches: n, route: r } = he(t);
-            return le(), void B(a, { matches: n, loaderData: {}, errors: { [r.id]: e } });
+            let e = me(404, { pathname: a.pathname }),
+              { matches: n, route: r } = ve(t);
+            return se(), void B(a, { matches: n, loaderData: {}, errors: { [r.id]: e } });
           }
           if (
-            !((h = _.location),
-            (m = a),
-            h.pathname !== m.pathname ||
-              h.search !== m.search ||
-              h.hash === m.hash ||
-              (l && l.submission && Ee(l.submission.formMethod)))
+            !((p = _.location),
+            (v = a),
+            p.pathname !== v.pathname ||
+              p.search !== v.search ||
+              p.hash === v.hash ||
+              (c && c.submission && ke(c.submission.formMethod)))
           )
             return void B(a, { matches: f });
-          var h, m;
+          var p, v;
           y = new AbortController();
           let b,
             C,
-            P = ue(e.history, a, y.signal, l && l.submission);
-          if (l && l.pendingError) C = { [pe(f).route.id]: l.pendingError };
-          else if (l && l.submission && Ee(l.submission.formMethod)) {
+            P = le(e.history, a, y.signal, c && c.submission);
+          if (c && c.pendingError) C = { [he(f).route.id]: c.pendingError };
+          else if (c && c.submission && ke(c.submission.formMethod)) {
             let e = await (async function (e, t, n, a, o) {
               j();
               let s,
                 u = r({ state: 'submitting', location: t }, n);
               L({ navigation: u });
-              let l = Ze(a, t);
+              let l = Re(a, t);
               if (l.route.action) {
-                if (((s = await se('action', e, l, a, g.basename)), e.signal.aborted))
+                if (((s = await ue('action', e, l, a, g.basename)), e.signal.aborted))
                   return { shortCircuited: !0 };
               } else
                 s = {
-                  type: p.error,
-                  error: ve(405, {
+                  type: h.error,
+                  error: me(405, {
                     method: e.method,
                     pathname: t.pathname,
                     routeId: l.route.id
                   })
                 };
-              if (_e(s)) {
+              if (Se(s)) {
                 let e;
                 return (
                   (e =
@@ -12002,20 +11748,20 @@
                   { shortCircuited: !0 }
                 );
               }
-              if (be(s)) {
-                let e = pe(a, l.route.id);
+              if (_e(s)) {
+                let e = he(a, l.route.id);
                 return (
                   !0 !== (o && o.replace) && (S = i.Push),
                   { pendingActionData: {}, pendingActionError: { [e.route.id]: s.error } }
                 );
               }
-              if (ye(s)) throw ve(400, { type: 'defer-action' });
+              if (be(s)) throw me(400, { type: 'defer-action' });
               return { pendingActionData: { [l.route.id]: s.data } };
-            })(P, a, l.submission, f, { replace: l.replace });
+            })(P, a, c.submission, f, { replace: c.replace });
             if (e.shortCircuited) return;
             (b = e.pendingActionData),
               (C = e.pendingActionError),
-              (d = r({ state: 'loading', location: a }, l.submission)),
+              (d = r({ state: 'loading', location: a }, c.submission)),
               (P = new Request(P.url, { signal: P.signal }));
           }
           let {
@@ -12047,9 +11793,9 @@
                       formEncType: d.formEncType
                     }
                   : void 0),
-              [p, h] = ie(e.history, _, i, f, n, k, T, x, l, c, M);
+              [p, h] = ae(e.history, _, i, f, n, k, T, x, l, c, M);
             if (
-              (le(
+              (se(
                 (e) =>
                   !(i && i.some((t) => t.route.id === e)) ||
                   (p && p.some((t) => t.route.id === e))
@@ -12101,9 +11847,9 @@
             } = await V(_.matches, i, p, h, t);
             if (t.signal.aborted) return { shortCircuited: !0 };
             h.forEach((e) => A.delete(e.key));
-            let b = me(v);
+            let b = ge(v);
             if (b) return await z(_, b, { replace: u }), { shortCircuited: !0 };
-            let { loaderData: S, errors: w } = de(_, i, p, m, c, h, g, O);
+            let { loaderData: S, errors: w } = fe(_, i, p, m, c, h, g, O);
             O.forEach((e, t) => {
               e.subscribe((n) => {
                 (n || e.done) && O.delete(t);
@@ -12118,12 +11864,12 @@
                 }
                 H(e);
               })();
-            let C = te(R);
+            let C = G(R);
             return r(
               { loaderData: S, errors: w },
               C || h.length > 0 ? { fetchers: new Map(_.fetchers) } : {}
             );
-          })(P, a, f, d, l && l.submission, l && l.replace, b, C);
+          })(P, a, f, d, c && c.submission, c && c.replace, b, C);
           D ||
             ((y = null),
             B(
@@ -12132,35 +11878,35 @@
             ));
         }
         function F(e) {
-          return _.fetchers.get(e) || Y;
+          return _.fetchers.get(e) || X;
         }
         async function z(t, n, a) {
           var o;
           let {
             submission: u,
-            replace: c,
+            replace: l,
             isFetchActionRedirect: d
           } = void 0 === a ? {} : a;
           n.revalidate && (k = !0);
-          let f = l(
+          let f = c(
             t.location,
             n.location,
             r({ _isRedirect: !0 }, d ? { _isFetchActionRedirect: !0 } : {})
           );
           if (
             (s(f, 'Expected a location on the redirect navigation'),
-            Q.test(n.location) &&
-              J &&
+            J.test(n.location) &&
+              ee &&
               void 0 !== (null == (o = window) ? void 0 : o.location))
           ) {
             let t = e.history.createURL(n.location).origin;
             if (window.location.origin !== t)
-              return void (c
+              return void (l
                 ? window.location.replace(n.location)
                 : window.location.assign(n.location));
           }
           y = null;
-          let p = !0 === c ? i.Replace : i.Push,
+          let p = !0 === l ? i.Replace : i.Push,
             { formMethod: h, formAction: v, formEncType: m, formData: g } = t.navigation;
           !u &&
             h &&
@@ -12168,7 +11914,7 @@
             g &&
             m &&
             (u = { formMethod: h, formAction: v, formEncType: m, formData: g }),
-            G.has(n.status) && u && Ee(u.formMethod)
+            q.has(n.status) && u && ke(u.formMethod)
               ? await U(p, f, {
                   submission: r({}, u, { formAction: n.location }),
                   preventScrollReset: w
@@ -12187,11 +11933,11 @@
         }
         async function V(t, n, r, i, a) {
           let o = await Promise.all([
-              ...r.map((e) => se('loader', a, e, n, g.basename)),
+              ...r.map((e) => ue('loader', a, e, n, g.basename)),
               ...i.map((t) =>
-                se(
+                ue(
                   'loader',
-                  ue(e.history, t.path, a.signal),
+                  le(e.history, t.path, a.signal),
                   t.match,
                   t.matches,
                   g.basename
@@ -12202,8 +11948,8 @@
             u = o.slice(r.length);
           return (
             await Promise.all([
-              ke(t, r, s, a.signal, !1, _.loaderData),
-              ke(
+              Te(t, r, s, a.signal, !1, _.loaderData),
+              Te(
                 t,
                 i.map((e) => e.match),
                 u,
@@ -12216,17 +11962,17 @@
         }
         function j() {
           (k = !0),
-            T.push(...le()),
+            T.push(...se()),
             M.forEach((e, t) => {
               A.has(t) && (x.push(t), K(t));
             });
         }
         function W(e, t, n) {
-          let r = pe(_.matches, t);
+          let r = he(_.matches, t);
           $(e), L({ errors: { [r.route.id]: n }, fetchers: new Map(_.fetchers) });
         }
         function $(e) {
-          A.has(e) && K(e), M.delete(e), P.delete(e), I.delete(e), _.fetchers.delete(e);
+          A.has(e) && K(e), M.delete(e), C.delete(e), I.delete(e), _.fetchers.delete(e);
         }
         function K(e) {
           let t = A.get(e);
@@ -12246,21 +11992,21 @@
             _.fetchers.set(t, e);
           }
         }
-        function te(e) {
+        function G(e) {
           let t = [];
-          for (let [n, r] of P)
+          for (let [n, r] of C)
             if (r < e) {
               let e = _.fetchers.get(n);
               s(e, 'Expected fetcher: ' + n),
-                'loading' === e.state && (K(n), P.delete(n), t.push(n));
+                'loading' === e.state && (K(n), C.delete(n), t.push(n));
             }
           return H(t), t.length > 0;
         }
-        function re(e) {
+        function ne(e) {
           _.blockers.delete(e), D.delete(e);
         }
-        function ae(e, t) {
-          let n = _.blockers.get(e) || X;
+        function ie(e, t) {
+          let n = _.blockers.get(e) || Q;
           s(
             ('unblocked' === n.state && 'blocked' === t.state) ||
               ('blocked' === n.state && 'blocked' === t.state) ||
@@ -12275,7 +12021,7 @@
         function oe(e) {
           let { currentLocation: t, nextLocation: n, historyAction: r } = e;
           if (0 === D.size) return;
-          D.size > 1 && C(!1, 'A router only supports one blocker at a time');
+          D.size > 1 && P(!1, 'A router only supports one blocker at a time');
           let i = Array.from(D.entries()),
             [a, o] = i[i.length - 1],
             s = _.blockers.get(a);
@@ -12285,7 +12031,7 @@
             ? a
             : void 0;
         }
-        function le(e) {
+        function se(e) {
           let t = [];
           return (
             O.forEach((n, r) => {
@@ -12295,8 +12041,8 @@
           );
         }
         function ce(e, t) {
-          if (o && u && c) {
-            let n = t.map((e) => Ae(e, _.loaderData)),
+          if (o && u && l) {
+            let n = t.map((e) => Ze(e, _.loaderData)),
               r = u(e, n) || e.key,
               i = o[r];
             if ('number' == typeof i) return i;
@@ -12319,7 +12065,7 @@
                 (n = e.history.listen((t) => {
                   let { action: n, location: r, delta: i } = t;
                   if (N) return void (N = !1);
-                  C(
+                  P(
                     0 === D.size || null != i,
                     'You are trying to use a blocker on a POP navigation to a location that was not created by @remix-run/router. This will fail silently in production. This can happen if you are navigating outside the router via `window.history.pushState`/`window.location.hash` instead of using router navigation APIs.  This can also happen if you are using createHashRouter and the user manually changes the URL.'
                   );
@@ -12331,11 +12077,11 @@
                   return a && null != i
                     ? ((N = !0),
                       e.history.go(-1 * i),
-                      void ae(a, {
+                      void ie(a, {
                         state: 'blocked',
                         location: r,
                         proceed() {
-                          ae(a, {
+                          ie(a, {
                             state: 'proceeding',
                             proceed: void 0,
                             reset: void 0,
@@ -12344,7 +12090,7 @@
                             e.history.go(i);
                         },
                         reset() {
-                          re(a), L({ blockers: new Map(g.state.blockers) });
+                          ne(a), L({ blockers: new Map(g.state.blockers) });
                         }
                       }))
                     : U(n, r);
@@ -12358,21 +12104,21 @@
             },
             enableScrollRestoration: function (e, t, n) {
               if (
-                ((o = e), (c = t), (u = n || ((e) => e.key)), !d && _.navigation === q)
+                ((o = e), (l = t), (u = n || ((e) => e.key)), !d && _.navigation === Y)
               ) {
                 d = !0;
                 let e = ce(_.location, _.matches);
                 null != e && L({ restoreScrollPosition: e });
               }
               return () => {
-                (o = null), (c = null), (u = null);
+                (o = null), (l = null), (u = null);
               };
             },
             navigate: async function t(n, a) {
               if ('number' == typeof n) return void e.history.go(n);
-              let { path: o, submission: s, error: u } = ne(n, a),
-                c = _.location,
-                d = l(_.location, o, a && a.state);
+              let { path: o, submission: s, error: u } = re(n, a),
+                l = _.location,
+                d = c(_.location, o, a && a.state);
               d = r({}, d, e.history.encodeLocation(d));
               let f = a && null != a.replace ? a.replace : void 0,
                 p = i.Push;
@@ -12380,12 +12126,12 @@
                 ? (p = i.Replace)
                 : !1 === f ||
                   (null != s &&
-                    Ee(s.formMethod) &&
+                    ke(s.formMethod) &&
                     s.formAction === _.location.pathname + _.location.search &&
                     (p = i.Replace));
               let h =
                   a && 'preventScrollReset' in a ? !0 === a.preventScrollReset : void 0,
-                v = oe({ currentLocation: c, nextLocation: d, historyAction: p });
+                v = oe({ currentLocation: l, nextLocation: d, historyAction: p });
               if (!v)
                 return await U(p, d, {
                   submission: s,
@@ -12393,11 +12139,11 @@
                   preventScrollReset: h,
                   replace: a && a.replace
                 });
-              ae(v, {
+              ie(v, {
                 state: 'blocked',
                 location: d,
                 proceed() {
-                  ae(v, {
+                  ie(v, {
                     state: 'proceeding',
                     proceed: void 0,
                     reset: void 0,
@@ -12406,25 +12152,25 @@
                     t(n, a);
                 },
                 reset() {
-                  re(v), L({ blockers: new Map(_.blockers) });
+                  ne(v), L({ blockers: new Map(_.blockers) });
                 }
               });
             },
             fetch: function (n, i, a, o) {
-              if (ee)
+              if (te)
                 throw new Error(
                   "router.fetch() was called during the server render, but it shouldn't be. You are likely calling a useFetcher() method in the body of your component. Try moving it to a useEffect or a callback."
                 );
               A.has(n) && K(n);
-              let u = v(t, a, e.basename);
-              if (!u) return void W(n, i, ve(404, { pathname: a }));
-              let { path: l, submission: c } = ne(a, o, !0),
-                d = Ze(u, l);
+              let u = m(t, a, e.basename);
+              if (!u) return void W(n, i, me(404, { pathname: a }));
+              let { path: l, submission: c } = re(a, o, !0),
+                d = Re(u, l);
               (w = !0 === (o && o.preventScrollReset)),
-                c && Ee(c.formMethod)
+                c && ke(c.formMethod)
                   ? (async function (n, i, a, o, u, l) {
                       if ((j(), M.delete(n), !o.route.action)) {
-                        let e = ve(405, {
+                        let e = me(405, {
                           method: l.formMethod,
                           pathname: a,
                           routeId: i
@@ -12438,11 +12184,11 @@
                         });
                       _.fetchers.set(n, d), L({ fetchers: new Map(_.fetchers) });
                       let f = new AbortController(),
-                        p = ue(e.history, a, f.signal, l);
+                        p = le(e.history, a, f.signal, l);
                       A.set(n, f);
-                      let h = await se('action', p, o, u, g.basename);
+                      let h = await ue('action', p, o, u, g.basename);
                       if (p.signal.aborted) return void (A.get(n) === f && A.delete(n));
-                      if (_e(h)) {
+                      if (Se(h)) {
                         A.delete(n), I.add(n);
                         let e = r({ state: 'loading' }, l, {
                           data: void 0,
@@ -12454,27 +12200,27 @@
                           z(_, h, { isFetchActionRedirect: !0 })
                         );
                       }
-                      if (be(h)) return void W(n, i, h.error);
-                      if (ye(h)) throw ve(400, { type: 'defer-action' });
-                      let m = _.navigation.location || _.location,
-                        b = ue(e.history, m, f.signal),
+                      if (_e(h)) return void W(n, i, h.error);
+                      if (be(h)) throw me(400, { type: 'defer-action' });
+                      let v = _.navigation.location || _.location,
+                        b = le(e.history, v, f.signal),
                         w =
                           'idle' !== _.navigation.state
-                            ? v(t, _.navigation.location, e.basename)
+                            ? m(t, _.navigation.location, e.basename)
                             : _.matches;
                       s(w, "Didn't find any matches after fetcher action");
                       let E = ++Z;
-                      P.set(n, E);
-                      let C = r({ state: 'loading', data: h.data }, l, {
+                      C.set(n, E);
+                      let P = r({ state: 'loading', data: h.data }, l, {
                         ' _hasFetcherDoneAnything ': !0
                       });
-                      _.fetchers.set(n, C);
-                      let [D, N] = ie(
+                      _.fetchers.set(n, P);
+                      let [D, N] = ae(
                         e.history,
                         _,
                         w,
                         l,
-                        m,
+                        v,
                         k,
                         T,
                         x,
@@ -12503,10 +12249,10 @@
                         fetcherResults: $
                       } = await V(_.matches, w, D, N, b);
                       if (f.signal.aborted) return;
-                      P.delete(n), A.delete(n), N.forEach((e) => A.delete(e.key));
-                      let K = me(U);
+                      C.delete(n), A.delete(n), N.forEach((e) => A.delete(e.key));
+                      let K = ge(U);
                       if (K) return z(_, K);
-                      let { loaderData: H, errors: G } = de(
+                      let { loaderData: H, errors: q } = fe(
                           _,
                           _.matches,
                           D,
@@ -12516,7 +12262,7 @@
                           $,
                           O
                         ),
-                        q = {
+                        Y = {
                           state: 'idle',
                           data: h.data,
                           formMethod: void 0,
@@ -12525,21 +12271,21 @@
                           formData: void 0,
                           ' _hasFetcherDoneAnything ': !0
                         };
-                      _.fetchers.set(n, q);
-                      let Y = te(E);
+                      _.fetchers.set(n, Y);
+                      let X = G(E);
                       'loading' === _.navigation.state && E > R
                         ? (s(S, 'Expected pending action'),
                           y && y.abort(),
                           B(_.navigation.location, {
                             matches: w,
                             loaderData: H,
-                            errors: G,
+                            errors: q,
                             fetchers: new Map(_.fetchers)
                           }))
                         : (L(
                             r(
-                              { errors: G, loaderData: fe(_.loaderData, H, w, G) },
-                              Y ? { fetchers: new Map(_.fetchers) } : {}
+                              { errors: q, loaderData: pe(_.loaderData, H, w, q) },
+                              X ? { fetchers: new Map(_.fetchers) } : {}
                             )
                           ),
                           (k = !1));
@@ -12560,15 +12306,15 @@
                         );
                       _.fetchers.set(t, c), L({ fetchers: new Map(_.fetchers) });
                       let d = new AbortController(),
-                        f = ue(e.history, i, d.signal);
+                        f = le(e.history, i, d.signal);
                       A.set(t, d);
-                      let p = await se('loader', f, a, o, g.basename);
-                      ye(p) && (p = (await Te(p, f.signal, !0)) || p);
+                      let p = await ue('loader', f, a, o, g.basename);
+                      be(p) && (p = (await xe(p, f.signal, !0)) || p);
                       A.get(t) === d && A.delete(t);
                       if (f.signal.aborted) return;
-                      if (_e(p)) return void (await z(_, p));
-                      if (be(p)) {
-                        let e = pe(_.matches, n);
+                      if (Se(p)) return void (await z(_, p));
+                      if (_e(p)) {
+                        let e = he(_.matches, n);
                         return (
                           _.fetchers.delete(t),
                           void L({
@@ -12577,7 +12323,7 @@
                           })
                         );
                       }
-                      s(!ye(p), 'Unhandled fetcher deferred data');
+                      s(!be(p), 'Unhandled fetcher deferred data');
                       let h = {
                         state: 'idle',
                         data: p.data,
@@ -12611,13 +12357,13 @@
                 a.clear(),
                 y && y.abort(),
                 _.fetchers.forEach((e, t) => $(t)),
-                _.blockers.forEach((e, t) => re(t));
+                _.blockers.forEach((e, t) => ne(t));
             },
             getBlocker: function (e, t) {
-              let n = _.blockers.get(e) || X;
+              let n = _.blockers.get(e) || Q;
               return D.get(e) !== t && D.set(e, t), n;
             },
-            deleteBlocker: re,
+            deleteBlocker: ne,
             _internalFetchControllers: A,
             _internalActiveDeferreds: O
           }),
@@ -12625,10 +12371,10 @@
         );
       }
       Symbol('deferred');
-      function ne(e, t, n) {
+      function re(e, t, n) {
         void 0 === n && (n = !1);
         let r,
-          i = 'string' == typeof e ? e : c(e);
+          i = 'string' == typeof e ? e : d(e);
         if (
           !t ||
           !(function (e) {
@@ -12636,28 +12382,28 @@
           })(t)
         )
           return { path: i };
-        if (t.formMethod && !we(t.formMethod))
-          return { path: i, error: ve(405, { method: t.formMethod }) };
+        if (t.formMethod && !Ee(t.formMethod))
+          return { path: i, error: me(405, { method: t.formMethod }) };
         if (
           t.formData &&
           ((r = {
             formMethod: t.formMethod || 'get',
-            formAction: ge(i),
+            formAction: ye(i),
             formEncType: (t && t.formEncType) || 'application/x-www-form-urlencoded',
             formData: t.formData
           }),
-          Ee(r.formMethod))
+          ke(r.formMethod))
         )
           return { path: i, submission: r };
-        let a = d(i),
-          o = le(t.formData);
+        let a = f(i),
+          o = ce(t.formData);
         return (
-          n && a.search && xe(a.search) && o.append('index', ''),
+          n && a.search && Ae(a.search) && o.append('index', ''),
           (a.search = '?' + o),
-          { path: c(a), submission: r }
+          { path: d(a), submission: r }
         );
       }
-      function re(e, t) {
+      function ie(e, t) {
         let n = e;
         if (t) {
           let r = e.findIndex((e) => e.route.id === t);
@@ -12665,13 +12411,13 @@
         }
         return n;
       }
-      function ie(e, t, n, i, a, o, s, u, l, c, d) {
+      function ae(e, t, n, i, a, o, s, u, l, c, d) {
         let f = c ? Object.values(c)[0] : l ? Object.values(l)[0] : void 0,
           p = e.createURL(t.location),
           h = e.createURL(a),
           v = o || p.toString() === h.toString() || p.search !== h.search,
           m = c ? Object.keys(c)[0] : void 0,
-          g = re(n, m).filter((e, n) => {
+          g = ie(n, m).filter((e, n) => {
             if (null == e.route.loader) return !1;
             if (
               (function (e, t, n) {
@@ -12684,7 +12430,7 @@
               return !0;
             let a = t.matches[n],
               o = e;
-            return oe(
+            return se(
               e,
               r(
                 {
@@ -12694,7 +12440,7 @@
                   nextParams: o.params
                 },
                 i,
-                { actionResult: f, defaultShouldRevalidate: v || ae(a, o) }
+                { actionResult: f, defaultShouldRevalidate: v || oe(a, o) }
               )
             );
           }),
@@ -12705,7 +12451,7 @@
               if (n.some((t) => t.route.id === e.routeId))
                 if (u.includes(a)) y.push(r({ key: a }, e));
                 else {
-                  oe(
+                  se(
                     e.match,
                     r(
                       {
@@ -12723,35 +12469,35 @@
           [g, y]
         );
       }
-      function ae(e, t) {
+      function oe(e, t) {
         let n = e.route.path;
         return (
           e.pathname !== t.pathname ||
           (null != n && n.endsWith('*') && e.params['*'] !== t.params['*'])
         );
       }
-      function oe(e, t) {
+      function se(e, t) {
         if (e.route.shouldRevalidate) {
           let n = e.route.shouldRevalidate(t);
           if ('boolean' == typeof n) return n;
         }
         return t.defaultShouldRevalidate;
       }
-      async function se(e, t, n, r, i, a, o, u) {
-        let l, d, f;
+      async function ue(e, t, n, r, i, a, o, u) {
+        let l, c, f;
         void 0 === i && (i = '/'), void 0 === a && (a = !1), void 0 === o && (o = !1);
-        let h = new Promise((e, t) => (f = t)),
+        let p = new Promise((e, t) => (f = t)),
           v = () => f();
         t.signal.addEventListener('abort', v);
         try {
           let r = n.route[e];
           s(r, 'Could not find the ' + e + ' to run on the "' + n.route.id + '" route'),
-            (d = await Promise.race([
+            (c = await Promise.race([
               r({ request: t, params: n.params, context: u }),
-              h
+              p
             ])),
             s(
-              void 0 !== d,
+              void 0 !== c,
               'You defined ' +
                 ('action' === e ? 'an action' : 'a loader') +
                 ' for route "' +
@@ -12761,21 +12507,21 @@
                 '` function. Please return a value or `null`.'
             );
         } catch (e) {
-          (l = p.error), (d = e);
+          (l = h.error), (c = e);
         } finally {
           t.signal.removeEventListener('abort', v);
         }
-        if (Se(d)) {
+        if (we(c)) {
           let e,
-            u = d.status;
-          if (H.has(u)) {
-            let e = d.headers.get('Location');
+            u = c.status;
+          if (G.has(u)) {
+            let e = c.headers.get('Location');
             if (
               (s(
                 e,
                 'Redirects returned/thrown from loaders/actions must have a Location header'
               ),
-              Q.test(e))
+              J.test(e))
             ) {
               if (!a) {
                 let n = new URL(t.url),
@@ -12783,56 +12529,56 @@
                 r.origin === n.origin && (e = r.pathname + r.search + r.hash);
               }
             } else {
-              let a = M(
+              let a = O(
                 e,
-                I(r.slice(0, r.indexOf(n) + 1)).map((e) => e.pathnameBase),
+                M(r.slice(0, r.indexOf(n) + 1)).map((e) => e.pathnameBase),
                 new URL(t.url).pathname
               );
-              if ((s(c(a), 'Unable to resolve redirect location: ' + e), i)) {
+              if ((s(d(a), 'Unable to resolve redirect location: ' + e), i)) {
                 let e = a.pathname;
-                a.pathname = '/' === e ? i : O([i, e]);
+                a.pathname = '/' === e ? i : D([i, e]);
               }
-              e = c(a);
+              e = d(a);
             }
-            if (a) throw (d.headers.set('Location', e), d);
+            if (a) throw (c.headers.set('Location', e), c);
             return {
-              type: p.redirect,
+              type: h.redirect,
               status: u,
               location: e,
-              revalidate: null !== d.headers.get('X-Remix-Revalidate')
+              revalidate: null !== c.headers.get('X-Remix-Revalidate')
             };
           }
-          if (o) throw { type: l || p.data, response: d };
-          let f = d.headers.get('Content-Type');
+          if (o) throw { type: l || h.data, response: c };
+          let f = c.headers.get('Content-Type');
           return (
-            (e = f && /\bapplication\/json\b/.test(f) ? await d.json() : await d.text()),
-            l === p.error
-              ? { type: l, error: new z(u, d.statusText, e), headers: d.headers }
-              : { type: p.data, data: e, statusCode: d.status, headers: d.headers }
+            (e = f && /\bapplication\/json\b/.test(f) ? await c.json() : await c.text()),
+            l === h.error
+              ? { type: l, error: new V(u, c.statusText, e), headers: c.headers }
+              : { type: h.data, data: e, statusCode: c.status, headers: c.headers }
           );
         }
-        return l === p.error
-          ? { type: l, error: d }
-          : d instanceof U
-          ? { type: p.deferred, deferredData: d }
-          : { type: p.data, data: d };
+        return l === h.error
+          ? { type: l, error: c }
+          : c instanceof F
+          ? { type: h.deferred, deferredData: c }
+          : { type: h.data, data: c };
       }
-      function ue(e, t, n, r) {
-        let i = e.createURL(ge(t)).toString(),
+      function le(e, t, n, r) {
+        let i = e.createURL(ye(t)).toString(),
           a = { signal: n };
-        if (r && Ee(r.formMethod)) {
+        if (r && ke(r.formMethod)) {
           let { formMethod: e, formEncType: t, formData: n } = r;
           (a.method = e.toUpperCase()),
-            (a.body = 'application/x-www-form-urlencoded' === t ? le(n) : n);
+            (a.body = 'application/x-www-form-urlencoded' === t ? ce(n) : n);
         }
         return new Request(i, a);
       }
-      function le(e) {
+      function ce(e) {
         let t = new URLSearchParams();
         for (let [n, r] of e.entries()) t.append(n, r instanceof File ? r.name : r);
         return t;
       }
-      function ce(e, t, n, r, i) {
+      function de(e, t, n, r, i) {
         let a,
           o = {},
           u = null,
@@ -12842,18 +12588,18 @@
           n.forEach((n, d) => {
             let f = t[d].route.id;
             if (
-              (s(!_e(n), 'Cannot handle redirect results in processLoaderData'), be(n))
+              (s(!Se(n), 'Cannot handle redirect results in processLoaderData'), _e(n))
             ) {
-              let t = pe(e, f),
+              let t = he(e, f),
                 i = n.error;
               r && ((i = Object.values(r)[0]), (r = void 0)),
                 (u = u || {}),
                 null == u[t.route.id] && (u[t.route.id] = i),
                 (o[f] = void 0),
-                l || ((l = !0), (a = V(n.error) ? n.error.status : 500)),
+                l || ((l = !0), (a = j(n.error) ? n.error.status : 500)),
                 n.headers && (c[f] = n.headers);
             } else
-              ye(n)
+              be(n)
                 ? (i.set(f, n.deferredData), (o[f] = n.deferredData.data))
                 : (o[f] = n.data),
                 null == n.statusCode || 200 === n.statusCode || l || (a = n.statusCode),
@@ -12863,18 +12609,18 @@
           { loaderData: o, errors: u, statusCode: a || 200, loaderHeaders: c }
         );
       }
-      function de(e, t, n, i, a, o, u, l) {
-        let { loaderData: c, errors: d } = ce(t, n, i, a, l);
+      function fe(e, t, n, i, a, o, u, l) {
+        let { loaderData: c, errors: d } = de(t, n, i, a, l);
         for (let t = 0; t < o.length; t++) {
           let { key: n, match: i } = o[t];
           s(void 0 !== u && void 0 !== u[t], 'Did not find corresponding fetcher result');
           let a = u[t];
-          if (be(a)) {
-            let t = pe(e.matches, i.route.id);
+          if (_e(a)) {
+            let t = he(e.matches, i.route.id);
             (d && d[t.route.id]) || (d = r({}, d, { [t.route.id]: a.error })),
               e.fetchers.delete(n);
-          } else if (_e(a)) s(!1, 'Unhandled fetcher revalidation redirect');
-          else if (ye(a)) s(!1, 'Unhandled fetcher deferred data');
+          } else if (Se(a)) s(!1, 'Unhandled fetcher revalidation redirect');
+          else if (be(a)) s(!1, 'Unhandled fetcher deferred data');
           else {
             let t = {
               state: 'idle',
@@ -12890,7 +12636,7 @@
         }
         return { loaderData: c, errors: d };
       }
-      function fe(e, t, n, i) {
+      function pe(e, t, n, i) {
         let a = r({}, t);
         for (let r of n) {
           let n = r.route.id;
@@ -12904,14 +12650,14 @@
         }
         return a;
       }
-      function pe(e, t) {
+      function he(e, t) {
         return (
           (t ? e.slice(0, e.findIndex((e) => e.route.id === t) + 1) : [...e])
             .reverse()
             .find((e) => !0 === e.route.hasErrorBoundary) || e[0]
         );
       }
-      function he(e) {
+      function ve(e) {
         let t = e.find((e) => e.index || !e.path || '/' === e.path) || {
           id: '__shim-error-route__'
         };
@@ -12920,7 +12666,7 @@
           route: t
         };
       }
-      function ve(e, t) {
+      function me(e, t) {
         let { pathname: n, routeId: r, method: i, type: a } = void 0 === t ? {} : t,
           o = 'Unknown Server Error',
           s = 'Unknown @remix-run/router error';
@@ -12954,28 +12700,28 @@
                     r +
                     '", so there is no way to handle the request.')
                 : i && (s = 'Invalid request method "' + i.toUpperCase() + '"')),
-          new z(e || 500, o, new Error(s), !0)
+          new V(e || 500, o, new Error(s), !0)
         );
       }
-      function me(e) {
+      function ge(e) {
         for (let t = e.length - 1; t >= 0; t--) {
           let n = e[t];
-          if (_e(n)) return n;
+          if (Se(n)) return n;
         }
       }
-      function ge(e) {
-        return c(r({}, 'string' == typeof e ? d(e) : e, { hash: '' }));
-      }
       function ye(e) {
-        return e.type === p.deferred;
+        return d(r({}, 'string' == typeof e ? f(e) : e, { hash: '' }));
       }
       function be(e) {
-        return e.type === p.error;
+        return e.type === h.deferred;
       }
       function _e(e) {
-        return (e && e.type) === p.redirect;
+        return e.type === h.error;
       }
       function Se(e) {
+        return (e && e.type) === h.redirect;
+      }
+      function we(e) {
         return (
           null != e &&
           'number' == typeof e.status &&
@@ -12984,47 +12730,47 @@
           void 0 !== e.body
         );
       }
-      function we(e) {
-        return K.has(e);
-      }
       function Ee(e) {
-        return W.has(e);
+        return H.has(e);
       }
-      async function ke(e, t, n, r, i, a) {
+      function ke(e) {
+        return $.has(e);
+      }
+      async function Te(e, t, n, r, i, a) {
         for (let o = 0; o < n.length; o++) {
           let s = n[o],
             u = t[o],
             l = e.find((e) => e.route.id === u.route.id),
-            c = null != l && !ae(l, u) && void 0 !== (a && a[u.route.id]);
-          ye(s) &&
+            c = null != l && !oe(l, u) && void 0 !== (a && a[u.route.id]);
+          be(s) &&
             (i || c) &&
-            (await Te(s, r, i).then((e) => {
+            (await xe(s, r, i).then((e) => {
               e && (n[o] = e || n[o]);
             }));
         }
       }
-      async function Te(e, t, n) {
+      async function xe(e, t, n) {
         if ((void 0 === n && (n = !1), !(await e.deferredData.resolveData(t)))) {
           if (n)
             try {
-              return { type: p.data, data: e.deferredData.unwrappedData };
+              return { type: h.data, data: e.deferredData.unwrappedData };
             } catch (e) {
-              return { type: p.error, error: e };
+              return { type: h.error, error: e };
             }
-          return { type: p.data, data: e.deferredData.data };
+          return { type: h.data, data: e.deferredData.data };
         }
       }
-      function xe(e) {
+      function Ae(e) {
         return new URLSearchParams(e).getAll('index').some((e) => '' === e);
       }
-      function Ae(e, t) {
+      function Ze(e, t) {
         let { route: n, pathname: r, params: i } = e;
         return { id: n.id, pathname: r, params: i, data: t[n.id], handle: n.handle };
       }
-      function Ze(e, t) {
-        let n = 'string' == typeof t ? d(t).search : t.search;
-        if (e[e.length - 1].route.index && xe(n || '')) return e[e.length - 1];
-        let r = I(e);
+      function Re(e, t) {
+        let n = 'string' == typeof t ? f(t).search : t.search;
+        if (e[e.length - 1].route.index && Ae(n || '')) return e[e.length - 1];
+        let r = M(e);
         return r[r.length - 1];
       }
     },
@@ -21196,7 +20942,7 @@
     },
     9655: (e, t, n) => {
       'use strict';
-      n.d(t, { aj: () => l, rU: () => p });
+      n.d(t, { cP: () => l, rU: () => p });
       var r = n(7294),
         i = n(9250),
         a = n(2599);
@@ -21237,7 +20983,7 @@
       function l(e, t) {
         return (0, a.p7)({
           basename: null == t ? void 0 : t.basename,
-          history: (0, a.lX)({ window: null == t ? void 0 : t.window }),
+          history: (0, a.q_)({ window: null == t ? void 0 : t.window }),
           hydrationData: (null == t ? void 0 : t.hydrationData) || c(),
           routes: (0, i.DG)(e)
         }).initialize();
