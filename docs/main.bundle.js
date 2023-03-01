@@ -2,7 +2,7 @@
 (self.webpackChunkmy_player = self.webpackChunkmy_player || []).push([
   [179],
   {
-    262: (n, e, t) => {
+    6613: (n, e, t) => {
       var l = t(7294),
         o = t(745),
         r = t(9655),
@@ -865,7 +865,7 @@
                 ? (F().b[4][0]++, F().s[12]++, n.requestFullscreen())
                 : F().b[4][1]++);
       };
-      const H = function (n) {
+      const R = function (n) {
         F().f[0]++;
         var e = Z((F().s[1]++, (0, l.useState)(!1)), 2),
           t = e[0],
@@ -888,7 +888,7 @@
           })
         );
       };
-      function R() {
+      function H() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\VideoControls\\VideoControls.tsx',
           e = new Function('return this')(),
@@ -919,18 +919,18 @@
           });
         var o = l[n];
         return (
-          (R = function () {
+          (H = function () {
             return o;
           }),
           o
         );
       }
-      R(), R().s[0]++;
+      H(), H().s[0]++;
       const $ = function (n) {
-        R().f[0]++;
-        var e = (R().s[1]++, n).player;
+        H().f[0]++;
+        var e = (H().s[1]++, n).player;
         return (
-          R().s[2]++,
+          H().s[2]++,
           (0, m.jsxs)('div', {
             className: U,
             children: [
@@ -941,7 +941,7 @@
               }),
               (0, m.jsx)(y, { duration: n.duration, player: e }),
               (0, m.jsx)(O, { player: e }),
-              (0, m.jsx)(H, { videoWrapper: n.videoWrapper })
+              (0, m.jsx)(R, { videoWrapper: n.videoWrapper })
             ]
           })
         );
@@ -984,9 +984,9 @@
             (n.PAUSED = 'PAUSED'),
             (n.NONE = 'NONE');
         })(W || (W = {}));
-      const X = 'Player_videoSpinner_MgTQt',
-        K = 'Player_vid_rmC3e',
-        Q = 'Player_videoControlsContrainer_xCza2',
+      const K = 'Player_videoSpinner_MgTQt',
+        Q = 'Player_vid_rmC3e',
+        X = 'Player_videoControlsContrainer_xCza2',
         nn = 'Player_videoWrapper_EJcXx';
       function en() {
         var n =
@@ -1506,14 +1506,14 @@
             children: [
               (en().b[0][0]++,
               i === W.LOADING &&
-                (en().b[0][1]++, (0, m.jsx)(c.Z, { className: X, color: 'success' }))),
-              (0, m.jsx)('video', { className: K, ref: d }),
+                (en().b[0][1]++, (0, m.jsx)(c.Z, { className: K, color: 'success' }))),
+              (0, m.jsx)('video', { className: Q, ref: d }),
               (en().b[1][0]++,
               e &&
                 (en().b[1][1]++, o) &&
                 (en().b[1][2]++,
                 (0, m.jsx)('div', {
-                  className: Q,
+                  className: X,
                   children: (0, m.jsx)($, {
                     player: e,
                     videoWrapper: s.current,
@@ -2083,10 +2083,11 @@
           })
         );
       };
-      var Dn = t(6914),
-        Mn = t(9844),
-        Pn = t(8953);
-      function En() {
+      var Dn = t(2642),
+        Mn = t(8044),
+        Pn = t(9844),
+        En = t(8953);
+      function Nn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\ModeButton\\ModeButton.tsx',
           e = new Function('return this')(),
@@ -2141,13 +2142,13 @@
           });
         var o = l[n];
         return (
-          (En = function () {
+          (Nn = function () {
             return o;
           }),
           o
         );
       }
-      function Nn(n, e) {
+      function On(n, e) {
         return (
           (function (n) {
             if (Array.isArray(n)) return n;
@@ -2190,12 +2191,12 @@
           })(n, e) ||
           (function (n, e) {
             if (!n) return;
-            if ('string' == typeof n) return On(n, e);
+            if ('string' == typeof n) return Bn(n, e);
             var t = Object.prototype.toString.call(n).slice(8, -1);
             'Object' === t && n.constructor && (t = n.constructor.name);
             if ('Map' === t || 'Set' === t) return Array.from(n);
             if ('Arguments' === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))
-              return On(n, e);
+              return Bn(n, e);
           })(n, e) ||
           (function () {
             throw new TypeError(
@@ -2204,157 +2205,59 @@
           })()
         );
       }
-      function On(n, e) {
+      function Bn(n, e) {
         (null == e || e > n.length) && (e = n.length);
         for (var t = 0, l = new Array(e); t < e; t++) l[t] = n[t];
         return l;
       }
-      En(), En().s[0]++;
-      const Bn = function () {
-          En().f[0]++;
-          var n = Nn((En().s[1]++, (0, l.useState)(!0)), 2),
+      Nn(), Nn().s[0]++;
+      const Un = function () {
+          Nn().f[0]++;
+          var n = On((Nn().s[1]++, (0, l.useState)(!0)), 2),
             e = n[0],
             t = n[1];
           return (
-            En().s[2]++,
+            Nn().s[2]++,
             (0, m.jsx)(v.Z, {
               'aria-label': 'Dark/Light mode button',
               onClick: function () {
                 return (
-                  En().f[1]++,
-                  En().s[3]++,
+                  Nn().f[1]++,
+                  Nn().s[3]++,
                   t(function (n) {
-                    return En().f[2]++, En().s[4]++, !n;
+                    return Nn().f[2]++, Nn().s[4]++, !n;
                   })
                 );
               },
               children: e
-                ? (En().b[0][0]++, (0, m.jsx)(Mn.Z, {}))
-                : (En().b[0][1]++, (0, m.jsx)(Pn.Z, {}))
+                ? (Nn().b[0][0]++, (0, m.jsx)(Pn.Z, {}))
+                : (Nn().b[0][1]++, (0, m.jsx)(En.Z, {}))
             })
           );
         },
-        Un = t.p + 'assets/images/my-player_8zXaQ.png',
-        In = 'NavigationBar_header_Hcc4J',
-        Ln = 'NavigationBar_navigation_Yv6PJ',
-        kn = 'NavigationBar_icon_YZ3L5';
-      function Tn() {
+        In = t.p + 'assets/images/my-player_8zXaQ.png',
+        Ln = 'NavigationBar_container_UYD6_',
+        kn = 'NavigationBar_iconAndNav_sUeFx',
+        Tn = 'NavigationBar_icon_YZ3L5';
+      function Fn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\NavigationBar\\NavigationBar.tsx',
           e = new Function('return this')(),
           t = '__coverage__',
           l = e[t] || (e[t] = {});
-        (l[n] && '15791e549297217af33c0a52207de031159c5382' === l[n].hash) ||
+        (l[n] && '50f95674aee49948f1956cc410fbb8ecf9c1c19c' === l[n].hash) ||
           (l[n] = {
             path: 'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\NavigationBar\\NavigationBar.tsx',
             statementMap: {
-              0: { start: { line: 12, column: 29 }, end: { line: 16, column: 1 } },
-              1: { start: { line: 22, column: 22 }, end: { line: 40, column: 1 } },
-              2: { start: { line: 23, column: 2 }, end: { line: 39, column: 4 } },
-              3: { start: { line: 30, column: 10 }, end: { line: 34, column: 12 } }
+              0: { start: { line: 16, column: 22 }, end: { line: 38, column: 1 } },
+              1: { start: { line: 17, column: 2 }, end: { line: 37, column: 4 } }
             },
             fnMap: {
               0: {
                 name: '(anonymous_0)',
-                decl: { start: { line: 22, column: 22 }, end: { line: 22, column: 23 } },
-                loc: { start: { line: 22, column: 28 }, end: { line: 40, column: 1 } },
-                line: 22
-              },
-              1: {
-                name: '(anonymous_1)',
-                decl: { start: { line: 29, column: 21 }, end: { line: 29, column: 22 } },
-                loc: { start: { line: 29, column: 44 }, end: { line: 35, column: 9 } },
-                line: 29
-              }
-            },
-            branchMap: {},
-            s: { 0: 0, 1: 0, 2: 0, 3: 0 },
-            f: { 0: 0, 1: 0 },
-            b: {},
-            _coverageSchema: '1a1c01bbd47fc00a2c39e90264f33305004495a9',
-            hash: '15791e549297217af33c0a52207de031159c5382'
-          });
-        var o = l[n];
-        return (
-          (Tn = function () {
-            return o;
-          }),
-          o
-        );
-      }
-      Tn();
-      var Fn =
-        (Tn().s[0]++,
-        [
-          { path: 'bonus-section', text: 'Bonus' },
-          { path: 'series', text: 'Séries' },
-          { path: 'movies', text: 'Films' }
-        ]);
-      Tn().s[1]++;
-      const Zn = function () {
-          return (
-            Tn().f[0]++,
-            Tn().s[2]++,
-            (0, m.jsxs)('header', {
-              className: In,
-              children: [
-                (0, m.jsxs)('nav', {
-                  className: Ln,
-                  children: [
-                    (0, m.jsx)(r.rU, {
-                      to: '/',
-                      children: (0, m.jsx)('img', {
-                        className: kn,
-                        height: 64,
-                        alt: 'website logo',
-                        src: Un
-                      })
-                    }),
-                    Fn.map(function (n) {
-                      return (
-                        Tn().f[1]++,
-                        Tn().s[3]++,
-                        (0, m.jsx)(
-                          Dn.Z,
-                          {
-                            variant: 'text',
-                            children: (0, m.jsx)(r.rU, {
-                              to: '/'.concat(n.path),
-                              children: n.text
-                            })
-                          },
-                          n.text
-                        )
-                      );
-                    })
-                  ]
-                }),
-                (0, m.jsx)(Bn, {})
-              ]
-            })
-          );
-        },
-        Gn = 'MainPage_page_rFqzE',
-        Vn = 'MainPage_main_Xsrkx';
-      function qn() {
-        var n =
-            'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\MainPage\\MainPage.tsx',
-          e = new Function('return this')(),
-          t = '__coverage__',
-          l = e[t] || (e[t] = {});
-        (l[n] && 'f9d1f833495f6893e43e54f82d2c76e8f1585fbc' === l[n].hash) ||
-          (l[n] = {
-            path: 'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\MainPage\\MainPage.tsx',
-            statementMap: {
-              0: { start: { line: 7, column: 17 }, end: { line: 16, column: 1 } },
-              1: { start: { line: 8, column: 2 }, end: { line: 15, column: 4 } }
-            },
-            fnMap: {
-              0: {
-                name: '(anonymous_0)',
-                decl: { start: { line: 7, column: 17 }, end: { line: 7, column: 18 } },
-                loc: { start: { line: 7, column: 36 }, end: { line: 16, column: 1 } },
-                line: 7
+                decl: { start: { line: 16, column: 22 }, end: { line: 16, column: 23 } },
+                loc: { start: { line: 16, column: 28 }, end: { line: 38, column: 1 } },
+                line: 16
               }
             },
             branchMap: {},
@@ -2362,31 +2265,108 @@
             f: { 0: 0 },
             b: {},
             _coverageSchema: '1a1c01bbd47fc00a2c39e90264f33305004495a9',
-            hash: 'f9d1f833495f6893e43e54f82d2c76e8f1585fbc'
+            hash: '50f95674aee49948f1956cc410fbb8ecf9c1c19c'
           });
         var o = l[n];
         return (
-          (qn = function () {
+          (Fn = function () {
             return o;
           }),
           o
         );
       }
-      qn(), qn().s[0]++;
-      const Hn = function () {
+      Fn(), Fn().s[0]++;
+      const Zn = function () {
         return (
-          qn().f[0]++,
-          qn().s[1]++,
+          Fn().f[0]++,
+          Fn().s[1]++,
           (0, m.jsxs)('div', {
-            className: Gn,
+            className: Ln,
             children: [
-              (0, m.jsx)(Zn, {}),
-              (0, m.jsx)('main', { className: Vn, children: (0, m.jsx)(a.j3, {}) })
+              (0, m.jsxs)('div', {
+                className: kn,
+                children: [
+                  (0, m.jsx)(r.rU, {
+                    to: '/',
+                    children: (0, m.jsx)('img', {
+                      className: Tn,
+                      height: 64,
+                      alt: 'website logo',
+                      src: In
+                    })
+                  }),
+                  (0, m.jsxs)(Mn.Z, {
+                    variant: 'text',
+                    'aria-label': 'navigation top bar',
+                    children: [
+                      (0, m.jsx)(Dn.Z, {
+                        children: (0, m.jsx)(r.rU, {
+                          to: '/bonus-section',
+                          children: 'Bonus'
+                        })
+                      }),
+                      (0, m.jsx)(Dn.Z, {
+                        children: (0, m.jsx)(r.rU, { to: '/series', children: 'Séries' })
+                      }),
+                      (0, m.jsx)(Dn.Z, {
+                        children: (0, m.jsx)(r.rU, { to: '/movies', children: 'Films' })
+                      })
+                    ]
+                  })
+                ]
+              }),
+              (0, m.jsx)(Un, {})
             ]
           })
         );
       };
-      function Rn() {
+      function Gn() {
+        var n =
+            'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\MainPage\\MainPage.tsx',
+          e = new Function('return this')(),
+          t = '__coverage__',
+          l = e[t] || (e[t] = {});
+        (l[n] && '689d76fba3ee3ae892a55aa54e94bb297c201c44' === l[n].hash) ||
+          (l[n] = {
+            path: 'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\MainPage\\MainPage.tsx',
+            statementMap: {
+              0: { start: { line: 6, column: 17 }, end: { line: 13, column: 1 } },
+              1: { start: { line: 7, column: 2 }, end: { line: 12, column: 4 } }
+            },
+            fnMap: {
+              0: {
+                name: '(anonymous_0)',
+                decl: { start: { line: 6, column: 17 }, end: { line: 6, column: 18 } },
+                loc: { start: { line: 6, column: 36 }, end: { line: 13, column: 1 } },
+                line: 6
+              }
+            },
+            branchMap: {},
+            s: { 0: 0, 1: 0 },
+            f: { 0: 0 },
+            b: {},
+            _coverageSchema: '1a1c01bbd47fc00a2c39e90264f33305004495a9',
+            hash: '689d76fba3ee3ae892a55aa54e94bb297c201c44'
+          });
+        var o = l[n];
+        return (
+          (Gn = function () {
+            return o;
+          }),
+          o
+        );
+      }
+      Gn(), Gn().s[0]++;
+      const Vn = function () {
+        return (
+          Gn().f[0]++,
+          Gn().s[1]++,
+          (0, m.jsxs)(m.Fragment, {
+            children: [(0, m.jsx)(Zn, {}), (0, m.jsx)(a.j3, {})]
+          })
+        );
+      };
+      function qn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\ErrorPage\\ErrorPage.tsx',
           e = new Function('return this')(),
@@ -2427,18 +2407,18 @@
           });
         var o = l[n];
         return (
-          (Rn = function () {
+          (qn = function () {
             return o;
           }),
           o
         );
       }
-      Rn(), Rn().s[0]++;
-      const $n = function () {
-        Rn().f[0]++;
-        var n = (Rn().s[1]++, (0, a.lk)());
+      qn(), qn().s[0]++;
+      const Rn = function () {
+        qn().f[0]++;
+        var n = (qn().s[1]++, (0, a.lk)());
         return (
-          Rn().s[2]++,
+          qn().s[2]++,
           (0, m.jsxs)('div', {
             id: 'error-page',
             children: [
@@ -2447,9 +2427,9 @@
               (0, m.jsx)('p', {
                 children: (0, m.jsx)('i', {
                   children:
-                    (Rn().b[0][0]++,
+                    (qn().b[0][0]++,
                     (null == n ? void 0 : n.statusText) ||
-                      (Rn().b[0][1]++, null == n ? void 0 : n.message))
+                      (qn().b[0][1]++, null == n ? void 0 : n.message))
                 })
               }),
               (0, m.jsx)('p', {
@@ -2459,7 +2439,7 @@
           })
         );
       };
-      function Wn() {
+      function Hn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\MoviesPage\\MoviesPage.tsx',
           e = new Function('return this')(),
@@ -2496,29 +2476,29 @@
           });
         var o = l[n];
         return (
-          (Wn = function () {
+          (Hn = function () {
             return o;
           }),
           o
         );
       }
-      Wn(), Wn().s[0]++;
-      const Yn = function () {
+      Hn(), Hn().s[0]++;
+      const $n = function () {
         return (
-          Wn().f[0]++,
-          Wn().s[1]++,
+          Hn().f[0]++,
+          Hn().s[1]++,
           (0, m.jsx)(_n, {
             onClickCard: function (n) {
               return (
-                Wn().f[1]++,
-                Wn().s[2]++,
+                Hn().f[1]++,
+                Hn().s[2]++,
                 console.log('🚀 ~ file: MoviesPage.tsx:15 ~ MoviesPage ~ value:', n)
               );
             }
           })
         );
       };
-      function zn() {
+      function Wn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\pages\\SeriesPage\\SeriesPage.tsx',
           e = new Function('return this')(),
@@ -2548,20 +2528,20 @@
           });
         var o = l[n];
         return (
-          (zn = function () {
+          (Wn = function () {
             return o;
           }),
           o
         );
       }
-      zn(), zn().s[0]++;
-      const Jn = function () {
-        return zn().f[0]++, zn().s[1]++, (0, m.jsx)('div', { children: 'SeriesPage' });
+      Wn(), Wn().s[0]++;
+      const Yn = function () {
+        return Wn().f[0]++, Wn().s[1]++, (0, m.jsx)('div', { children: 'SeriesPage' });
       };
-      var Xn = t(3691);
-      const Kn = 'TimeCodeSelector_container_umTlT',
-        Qn = 'TimeCodeSelector_timeCodeSelector_NN1fa';
-      function ne() {
+      var zn = t(3691);
+      const Jn = 'TimeCodeSelector_container_umTlT',
+        Kn = 'TimeCodeSelector_timeCodeSelector_NN1fa';
+      function Qn() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\AdditionalSections\\TimeCodeSelector\\TimeCodeSelector.tsx',
           e = new Function('return this')(),
@@ -2630,13 +2610,13 @@
           });
         var o = l[n];
         return (
-          (ne = function () {
+          (Qn = function () {
             return o;
           }),
           o
         );
       }
-      function ee(n, e) {
+      function Xn(n, e) {
         return (
           (function (n) {
             if (Array.isArray(n)) return n;
@@ -2679,12 +2659,12 @@
           })(n, e) ||
           (function (n, e) {
             if (!n) return;
-            if ('string' == typeof n) return te(n, e);
+            if ('string' == typeof n) return ne(n, e);
             var t = Object.prototype.toString.call(n).slice(8, -1);
             'Object' === t && n.constructor && (t = n.constructor.name);
             if ('Map' === t || 'Set' === t) return Array.from(n);
             if ('Arguments' === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))
-              return te(n, e);
+              return ne(n, e);
           })(n, e) ||
           (function () {
             throw new TypeError(
@@ -2693,61 +2673,61 @@
           })()
         );
       }
-      function te(n, e) {
+      function ne(n, e) {
         (null == e || e > n.length) && (e = n.length);
         for (var t = 0, l = new Array(e); t < e; t++) l[t] = n[t];
         return l;
       }
-      ne(), ne().s[0]++;
-      const le = function (n) {
-        ne().f[0]++;
-        var e = (ne().s[1]++, n).isLoading,
-          t = ee((ne().s[2]++, (0, l.useState)('')), 2),
+      Qn(), Qn().s[0]++;
+      const ee = function (n) {
+        Qn().f[0]++;
+        var e = (Qn().s[1]++, n).isLoading,
+          t = Xn((Qn().s[2]++, (0, l.useState)('')), 2),
           o = t[0],
           r = t[1],
-          a = ee((ne().s[3]++, (0, l.useState)(!1)), 2),
+          a = Xn((Qn().s[3]++, (0, l.useState)(!1)), 2),
           i = a[0],
           u = a[1];
         return (
-          ne().s[4]++,
+          Qn().s[4]++,
           (0, m.jsxs)('div', {
-            className: Kn,
+            className: Jn,
             children: [
               (0, m.jsxs)('div', {
-                className: Qn,
+                className: Kn,
                 children: [
-                  (0, m.jsx)(Xn.Z, {
+                  (0, m.jsx)(zn.Z, {
                     label: 'Write a timecode',
                     variant: 'standard',
                     value: o,
                     error: i,
                     onChange: function (n) {
-                      ne().f[1]++;
-                      var e = (ne().s[5]++, n.target.value);
-                      ne().s[6]++, u(isNaN(Number(e))), ne().s[7]++, r(e);
+                      Qn().f[1]++;
+                      var e = (Qn().s[5]++, n.target.value);
+                      Qn().s[6]++, u(isNaN(Number(e))), Qn().s[7]++, r(e);
                     }
                   }),
                   (0, m.jsx)(Dn.Z, {
                     variant: 'contained',
                     disabled:
-                      (ne().b[0][0]++,
+                      (Qn().b[0][0]++,
                       e ||
-                        (ne().b[0][1]++, 0 === o.trim().length) ||
-                        (ne().b[0][2]++, i)),
+                        (Qn().b[0][1]++, 0 === o.trim().length) ||
+                        (Qn().b[0][2]++, i)),
                     onClick: function () {
-                      return ne().f[2]++, ne().s[8]++, n.onClick(o);
+                      return Qn().f[2]++, Qn().s[8]++, n.onClick(o);
                     },
                     children: 'Click on me !'
                   })
                 ]
               }),
-              (ne().b[1][0]++, e && (ne().b[1][1]++, (0, m.jsx)(c.Z, {})))
+              (Qn().b[1][0]++, e && (Qn().b[1][1]++, (0, m.jsx)(c.Z, {})))
             ]
           })
         );
       };
-      var oe = t(2861);
-      function re() {
+      var te = t(2861);
+      function le() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\utils\\constants\\constants.ts',
           e = new Function('return this')(),
@@ -2769,15 +2749,15 @@
           });
         var o = l[n];
         return (
-          (re = function () {
+          (le = function () {
             return o;
           }),
           o
         );
       }
-      re();
-      var ae = (re().s[0]++, 'https://teamplayer.ddns.net:32783');
-      function ce() {
+      le();
+      var oe = (le().s[0]++, 'https://teamplayer.ddns.net:32783');
+      function re() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\api\\api.tsx',
           e = new Function('return this')(),
@@ -2799,19 +2779,19 @@
           });
         var o = l[n];
         return (
-          (ce = function () {
+          (re = function () {
             return o;
           }),
           o
         );
       }
-      ce();
-      const ie =
-        (ce().s[0]++,
-        oe.Z.create({ baseURL: ae, headers: { 'Content-Type': 'application/json' } }));
-      function ue(n) {
+      re();
+      const ae =
+        (re().s[0]++,
+        te.Z.create({ baseURL: oe, headers: { 'Content-Type': 'application/json' } }));
+      function ce(n) {
         return (
-          (ue =
+          (ce =
             'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
               ? function (n) {
                   return typeof n;
@@ -2824,10 +2804,10 @@
                     ? 'symbol'
                     : typeof n;
                 }),
-          ue(n)
+          ce(n)
         );
       }
-      function se() {
+      function ie() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\api\\scene.service.tsx',
           e = new Function('return this')(),
@@ -2864,14 +2844,14 @@
           });
         var o = l[n];
         return (
-          (se = function () {
+          (ie = function () {
             return o;
           }),
           o
         );
       }
-      function me() {
-        me = function () {
+      function ue() {
+        ue = function () {
           return n;
         };
         var n = {},
@@ -2943,7 +2923,7 @@
             if ('throw' !== i.type) {
               var u = i.arg,
                 m = u.value;
-              return m && 'object' == ue(m) && t.call(m, '__await')
+              return m && 'object' == ce(m) && t.call(m, '__await')
                 ? e.resolve(m.__await).then(
                     function (n) {
                       o('next', n, a, c);
@@ -3265,7 +3245,7 @@
           n
         );
       }
-      function de(n, e, t, l, o, r, a) {
+      function se(n, e, t, l, o, r, a) {
         try {
           var c = n[r](a),
             i = c.value;
@@ -3274,21 +3254,21 @@
         }
         c.done ? e(i) : Promise.resolve(i).then(l, o);
       }
-      se(), se().s[0]++;
-      const fe = function (n) {
+      ie(), ie().s[0]++;
+      const me = function (n) {
           return (
-            se().f[0]++,
-            se().s[1]++,
-            ie.get('/scene/'.concat(n)).then(
+            ie().f[0]++,
+            ie().s[1]++,
+            ae.get('/scene/'.concat(n)).then(
               (function () {
                 var n,
                   e =
-                    ((n = me().mark(function n(e) {
-                      return me().wrap(function (n) {
+                    ((n = ue().mark(function n(e) {
+                      return ue().wrap(function (n) {
                         for (;;)
                           switch ((n.prev = n.next)) {
                             case 0:
-                              return se().f[1]++, se().s[2]++, n.abrupt('return', e.data);
+                              return ie().f[1]++, ie().s[2]++, n.abrupt('return', e.data);
                             case 3:
                             case 'end':
                               return n.stop();
@@ -3301,10 +3281,10 @@
                       return new Promise(function (l, o) {
                         var r = n.apply(e, t);
                         function a(n) {
-                          de(r, l, o, a, c, 'next', n);
+                          se(r, l, o, a, c, 'next', n);
                         }
                         function c(n) {
-                          de(r, l, o, a, c, 'throw', n);
+                          se(r, l, o, a, c, 'throw', n);
                         }
                         a(void 0);
                       });
@@ -3316,9 +3296,9 @@
             )
           );
         },
-        pe = 'AdditionalSections_sectionContainer_J1gfm',
-        he = 'AdditionalSections_details_wa0bf';
-      function ye() {
+        de = 'AdditionalSections_sectionContainer_J1gfm',
+        fe = 'AdditionalSections_details_wa0bf';
+      function pe() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\components\\AdditionalSections\\AdditionalSections.tsx',
           e = new Function('return this')(),
@@ -3426,13 +3406,13 @@
           });
         var o = l[n];
         return (
-          (ye = function () {
+          (pe = function () {
             return o;
           }),
           o
         );
       }
-      function ve(n, e) {
+      function he(n, e) {
         return (
           (function (n) {
             if (Array.isArray(n)) return n;
@@ -3475,12 +3455,12 @@
           })(n, e) ||
           (function (n, e) {
             if (!n) return;
-            if ('string' == typeof n) return be(n, e);
+            if ('string' == typeof n) return ye(n, e);
             var t = Object.prototype.toString.call(n).slice(8, -1);
             'Object' === t && n.constructor && (t = n.constructor.name);
             if ('Map' === t || 'Set' === t) return Array.from(n);
             if ('Arguments' === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t))
-              return be(n, e);
+              return ye(n, e);
           })(n, e) ||
           (function () {
             throw new TypeError(
@@ -3489,57 +3469,57 @@
           })()
         );
       }
-      function be(n, e) {
+      function ye(n, e) {
         (null == e || e > n.length) && (e = n.length);
         for (var t = 0, l = new Array(e); t < e; t++) l[t] = n[t];
         return l;
       }
-      ye(), ye().s[0]++;
-      const ge = function () {
-        ye().f[0]++;
-        var n = ve((ye().s[1]++, (0, l.useState)(null)), 2),
+      pe(), pe().s[0]++;
+      const ve = function () {
+        pe().f[0]++;
+        var n = he((pe().s[1]++, (0, l.useState)(null)), 2),
           e = n[0],
           t = n[1],
-          o = ve((ye().s[2]++, (0, l.useState)(!1)), 2),
+          o = he((pe().s[2]++, (0, l.useState)(!1)), 2),
           r = o[0],
           a = o[1];
         return (
-          ye().s[3]++,
+          pe().s[3]++,
           (0, m.jsxs)('div', {
             children: [
               (0, m.jsx)('h1', { children: 'Additional Sections' }),
               (0, m.jsx)('h2', { children: 'Scene details according to timeCode' }),
-              (0, m.jsx)(le, {
+              (0, m.jsx)(ee, {
                 isLoading: r,
                 onClick: function (n) {
-                  ye().f[1]++,
-                    ye().s[4]++,
+                  pe().f[1]++,
+                    pe().s[4]++,
                     a(!0),
-                    ye().s[5]++,
-                    fe(Number(n)).then(function (n) {
-                      ye().f[2]++, ye().s[6]++, t(n), ye().s[7]++, a(!1);
+                    pe().s[5]++,
+                    me(Number(n)).then(function (n) {
+                      pe().f[2]++, pe().s[6]++, t(n), pe().s[7]++, a(!1);
                     });
                 }
               }),
-              (ye().b[1][0]++,
-              e && (ye().b[1][1]++, e.id)
-                ? (ye().b[0][0]++,
+              (pe().b[1][0]++,
+              e && (pe().b[1][1]++, e.id)
+                ? (pe().b[0][0]++,
                   (0, m.jsxs)('section', {
-                    className: pe,
+                    className: de,
                     children: [
                       (0, m.jsxs)('p', { children: ['id: ', e.id] }),
                       (0, m.jsxs)('p', { children: ['title: ', e.title] }),
-                      (ye().b[2][0]++,
+                      (pe().b[2][0]++,
                       e.casting &&
-                        (ye().b[2][1]++,
+                        (pe().b[2][1]++,
                         (0, m.jsxs)('details', {
-                          className: he,
+                          className: fe,
                           children: [
                             (0, m.jsx)('summary', { children: 'Casting' }),
                             e.casting.map(function (n) {
                               return (
-                                ye().f[3]++,
-                                ye().s[8]++,
+                                pe().f[3]++,
+                                pe().s[8]++,
                                 (0, m.jsxs)(
                                   'section',
                                   {
@@ -3561,17 +3541,17 @@
                           ]
                         }))),
                       (0, m.jsxs)('p', { children: ['image: ', e.image] }),
-                      (ye().b[3][0]++,
+                      (pe().b[3][0]++,
                       e.reactions &&
-                        (ye().b[3][1]++,
+                        (pe().b[3][1]++,
                         (0, m.jsxs)('details', {
-                          className: he,
+                          className: fe,
                           children: [
                             (0, m.jsx)('summary', { children: 'Reactions' }),
                             e.reactions.map(function (n) {
                               return (
-                                ye().f[4]++,
-                                ye().s[9]++,
+                                pe().f[4]++,
+                                pe().s[9]++,
                                 (0, m.jsxs)(
                                   'section',
                                   {
@@ -3597,12 +3577,12 @@
                       (0, m.jsxs)('p', { children: ['endTimecode: ', e.endTimecode] })
                     ]
                   }))
-                : (ye().b[0][1]++,
+                : (pe().b[0][1]++,
                   (0, m.jsx)(m.Fragment, {
                     children:
-                      (ye().b[4][0]++,
+                      (pe().b[4][0]++,
                       !r &&
-                        (ye().b[4][1]++,
+                        (pe().b[4][1]++,
                         (0, m.jsx)('p', {
                           children: 'No selected scene or no scene found'
                         })))
@@ -3611,7 +3591,7 @@
           })
         );
       };
-      function _e() {
+      function be() {
         var n =
             'C:\\Users\\alanl\\Documents\\Documents_Alan\\development\\my-player\\src\\index.tsx',
           e = new Function('return this')(),
@@ -3635,38 +3615,38 @@
           });
         var o = l[n];
         return (
-          (_e = function () {
+          (be = function () {
             return o;
           }),
           o
         );
       }
-      _e();
-      var xe =
-          (_e().s[0]++,
+      be();
+      var ge =
+          (be().s[0]++,
           (0, r.cP)([
             {
               path: '/',
-              element: (0, m.jsx)(Hn, {}),
-              errorElement: (0, m.jsx)($n, {}),
+              element: (0, m.jsx)(Vn, {}),
+              errorElement: (0, m.jsx)(Rn, {}),
               children: [
                 { index: !0, element: (0, m.jsx)(wn, {}) },
-                { path: 'bonus-section', element: (0, m.jsx)(ge, {}) },
-                { path: 'series', element: (0, m.jsx)(Jn, {}) },
-                { path: 'movies', element: (0, m.jsx)(Yn, {}) }
+                { path: 'bonus-section', element: (0, m.jsx)(ve, {}) },
+                { path: 'series', element: (0, m.jsx)(Yn, {}) },
+                { path: 'movies', element: (0, m.jsx)($n, {}) }
               ]
             }
           ])),
-        je = (_e().s[1]++, (0, o.s)(document.getElementById('app')));
-      _e().s[2]++,
-        je.render(
-          (0, m.jsx)(l.StrictMode, { children: (0, m.jsx)(a.pG, { router: xe }) })
+        _e = (be().s[1]++, (0, o.s)(document.getElementById('app')));
+      be().s[2]++,
+        _e.render(
+          (0, m.jsx)(l.StrictMode, { children: (0, m.jsx)(a.pG, { router: ge }) })
         );
     }
   },
   (n) => {
     n.O(0, [216], () => {
-      return (e = 262), n((n.s = e));
+      return (e = 6613), n((n.s = e));
       var e;
     });
     n.O();
