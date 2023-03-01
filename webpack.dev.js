@@ -10,6 +10,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
+    historyApiFallback: true,
     client: {
       overlay: {
         errors: true,
