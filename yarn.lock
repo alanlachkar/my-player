@@ -7464,20 +7464,12 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rx-player@^3.29.0:
-  version "3.29.0"
-  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-3.29.0.tgz#a2481b04bd18ff504a7be8d61a274ffc3c56a983"
-  integrity sha512-TVoG3JwBKxVTXc9bffx8LdoP4KvKPYQHzLf1iH3oFG/mNoLuXq869oxpSZs7ROZyVzbJuG5eaaNsdSWqP9G1VQ==
+rx-player@^3.30.0:
+  version "3.30.0"
+  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-3.30.0.tgz#e2cff8b8252843b1e626045621ad589e029e54aa"
+  integrity sha512-d3pfgxyHUkfOqaY93EbuXwK3HSd7hfdjGkDoiyuFyjjDBsRdDmElLGMODcJViobBLJLLcaTgczh+vhTyzgHBFQ==
   dependencies:
     next-tick "1.1.0"
-    rxjs "7.5.7"
-
-rxjs@7.5.7:
-  version "7.5.7"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.5.7.tgz#2ec0d57fdc89ece220d2e702730ae8f1e49def39"
-  integrity sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==
-  dependencies:
-    tslib "^2.1.0"
 
 rxjs@^7.5.1, rxjs@^7.8.0:
   version "7.8.0"
