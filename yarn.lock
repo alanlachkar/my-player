@@ -7736,10 +7736,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rx-player@^3.31.0:
-  version "3.31.0"
-  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-3.31.0.tgz#d1c94f8f9872b7097be91083b07edb37e11bcc1e"
-  integrity sha512-stALGRNK3OxXAX30ZqpsHPQauEOxVpBSsDAgINzULOfKSTp2ciRfiRNcNHkJWrqE7n58DV9K3pJVF2NmfJ/Pcg==
+rx-player@^3.32.1:
+  version "3.32.1"
+  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-3.32.1.tgz#930cab00f645b64ea5a429b05640a7eb39257277"
+  integrity sha512-OZT8JQpSgNtU+1GlHa/9dxBt2SO7BDnpbm/014FsAkEHkR7QZ8u9NZ2FeX6Kk+7F5AOVeQT7Mn2TU0J6Xg3MEw==
   dependencies:
     next-tick "1.1.0"
 
