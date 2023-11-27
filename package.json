@@ -35,7 +35,7 @@
     "chai": "^4.3.10",
     "css-loader": "^6.7.3",
     "css-minimizer-webpack-plugin": "^5.0.1",
-    "cypress": "13.5.0",
+    "cypress": "13.6.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.41.0",
     "eslint-plugin-react": "^7.32.2",
