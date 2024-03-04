@@ -59,7 +59,7 @@
     "@mui/material": "^5.15.11",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "axios": "^1.6.5",
+    "axios": "^1.6.7",
     "file-loader": "^6.2.0",
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
