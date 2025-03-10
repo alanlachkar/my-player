@@ -64,7 +64,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.2.0",
+    "react-router-dom": "^7.3.0",
     "rx-player": "^4.2.0",
     "typescript": "^5.8.2",
     "url-loader": "^4.1.1"
