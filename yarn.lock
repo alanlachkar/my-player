@@ -9195,10 +9195,10 @@ run-parallel@^1.1.9:
   dependencies:
     queue-microtask "^1.2.2"
 
-rx-player@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-4.4.1.tgz#a6717d8afb911a2b716a16189c9cf1bd70f73fd8"
-  integrity sha512-vWS6F8Gyy7uuIAiYuCQdihPlRx3l5ReUUtnriIqe1aHknnHHQ8hx97j++G0PuebeWXJxlTK/CrDL5q5oX/DL5A==
+rx-player@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/rx-player/-/rx-player-4.5.0.tgz#6c4b01ff93f62965423581591d695c60aa8a5109"
+  integrity sha512-Pn4l6hlBrgmBMhbuUGtzDzdxcJE6TLJKTuHOva7W8Ltpx5sc3J16KLrwAeguprU1FGXlzxdHYXSOic/wQkeuLQ==
 
 rxjs@^7.8.2:
   version "7.8.2"
